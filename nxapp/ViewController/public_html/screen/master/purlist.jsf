@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        beforePhase="#{backingBeanScope.backing_screen_master_purlist.bphase}">
+    <af:document title="purlist.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_purlist.d1}">
+        <af:resource type="css">
+            .td1 {
+                width: 12%;
+                padding: 2px;
+            }
+        </af:resource>
+        <af:form id="f1" inlineStyle="overflow: hidden ;" binding="#{backingBeanScope.backing_screen_master_purlist.f1}">
+            <af:spacer width="5px"/>
+            <af:panelGroupLayout id="pgl1" layout="vertical" styleClass="AFStretchWidth"
+                                 inlineStyle="margin-left: 10px;"
+                                 binding="#{backingBeanScope.backing_screen_master_purlist.pgl1}">
+                <af:panelGroupLayout layout="horizontal" id="pgl2"
+                                     binding="#{backingBeanScope.backing_screen_master_purlist.pgl2}">
+                    <af:outputLabel value="Choice" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_purlist.ol2}"/>
+                    <af:selectOneChoice id="soc2" autoSubmit="true"
+                                        valueChangeListener="#{backingBeanScope.backing_screen_master_purlist.choiceChange}"
+                                        binding="#{backingBeanScope.backing_screen_master_purlist.soc2}">
+                        <af:selectItem label="By name" value="By name" id="si4"
+                                       binding="#{backingBeanScope.backing_screen_master_purlist.si4}"/>
+                        <af:selectItem label="By id" value="By id" id="si1"
+                                       binding="#{backingBeanScope.backing_screen_master_purlist.si1}"/>
+                        <af:selectItem label="By date" value="By date" id="si2"
+                                       binding="#{backingBeanScope.backing_screen_master_purlist.si2}"/>
+                        <af:selectItem label="Paid" value="Paid" id="si5"
+                                       binding="#{backingBeanScope.backing_screen_master_purlist.si5}"/>
+                        <af:selectItem label="Due" value="Due" id="si6"
+                                       binding="#{backingBeanScope.backing_screen_master_purlist.si6}"/>
+                        <af:selectItem label="By All" value="By All" id="si7"
+                                       binding="#{backingBeanScope.backing_screen_master_purlist.si7}"/>
+                    </af:selectOneChoice>
+                    <af:spacer width="15px"/>
+                    <af:outputLabel value="Filter" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_purlist.ol1}"/>
+                    <af:inputText label="" id="it2" autoSubmit="true"
+                                  valueChangeListener="#{backingBeanScope.backing_screen_master_purlist.ValChange}"
+                                  binding="#{backingBeanScope.backing_screen_master_purlist.it2}"/>
+                    <af:chooseDate id="cd1" visible="false"
+                                   binding="#{backingBeanScope.backing_screen_master_purlist.cd1}"/>
+                    <af:spacer width="15px"/>
+                    <af:button text="Create New Purchase" id="b3"
+                               action="#{backingBeanScope.backing_screen_master_purlist.newpur}"
+                               inlineStyle="width: auto;"
+                               binding="#{backingBeanScope.backing_screen_master_purlist.b3}"/>
+                </af:panelGroupLayout>
+                <af:spacer width="3px"/>
+                <af:popup id="pop1">
+                    <af:menu text="menu 1" id="m1" binding="#{backingBeanScope.backing_screen_master_purlist.m1}">
+                        <af:commandMenuItem text="" id="cmi1" icon="/icon/Finance-Coins-icon.png"
+                                            action="#{backingBeanScope.backing_screen_master_purlist.payment}"
+                                            partialSubmit="true" partialTriggers="t1"
+                                            binding="#{backingBeanScope.backing_screen_master_purlist.cmi1}"
+                                            actionListener="#{backingBeanScope.backing_screen_master_purlist.Pay}"></af:commandMenuItem>
+                        <af:commandMenuItem text="" icon="/icon/Pencil-icon.png" id="cmi2"
+                                            action="#{backingBeanScope.backing_screen_master_purlist.Edit}"
+                                            partialSubmit="true" partialTriggers="t1"
+                                            binding="#{backingBeanScope.backing_screen_master_purlist.cmi2}"
+                                            actionListener="#{backingBeanScope.backing_screen_master_purlist.Edit}"/>
+                    </af:menu>
+                </af:popup>
+                <af:popup id="pop2" binding="#{backingBeanScope.backing_screen_master_purlist.pop2}">
+                    <af:panelWindow id="pw1" title="Payment" inlineStyle="width:400px;height:300px;"
+                                    binding="#{backingBeanScope.backing_screen_master_purlist.pw1}">
+                        <f:facet name="buttonBar"/>
+                        <table>
+                            <tr>
+                                <td class="td1">
+                                    <af:outputLabel value="Invoice Id" id="ol3"
+                                                    binding="#{backingBeanScope.backing_screen_master_purlist.ol3}"/>
+                                </td>
+                                <td class="td1">
+                                    <af:inputText label="" id="it5"
+                                                  binding="#{backingBeanScope.backing_screen_master_purlist.it5}"/>
+                                </td>
+                            </tr>
+                             
+                            <tr>
+                                <td class="td1">
+                                    <af:outputLabel value="Customer Name" id="ol5"
+                                                    binding="#{backingBeanScope.backing_screen_master_purlist.ol5}"/>
+                                </td>
+                                <td class="td1">
+                                    <af:inputText label="" id="it4"
+                                                  binding="#{backingBeanScope.backing_screen_master_purlist.it4}"/>
+                                </td>
+                            </tr>
+                             
+                            <tr>
+                                <td class="td1">
+                                    <af:outputLabel value="Date"/>
+                                </td>
+                                <td class="td1">
+                                    <af:inputDate label="" id="id1"
+                                                  binding="#{backingBeanScope.backing_screen_master_purlist.id1}"/>
+                                </td>
+                            </tr>
+                             
+                            <tr>
+                                <td class="td1">
+                                    <af:outputLabel value="Due Amount" id="ol7"
+                                                    binding="#{backingBeanScope.backing_screen_master_purlist.ol7}"/>
+                                </td>
+                                <td class="td1">
+                                    <af:inputText label="" id="it3"
+                                                  binding="#{backingBeanScope.backing_screen_master_purlist.it3}"/>
+                                </td>
+                            </tr>
+                             
+                            <tr>
+                                <td class="td1">
+                                    <af:outputLabel value="Paid Amount" id="ol6"
+                                                    binding="#{backingBeanScope.backing_screen_master_purlist.ol6}"/>
+                                </td>
+                                <td class="td1">
+                                    <af:inputText label="" id="it6" autoSubmit="true"
+                                                  valueChangeListener="#{backingBeanScope.backing_screen_master_purlist.paidValChange}"
+                                                  binding="#{backingBeanScope.backing_screen_master_purlist.it6}"/>
+                                </td>
+                            </tr>
+                             
+                            <tr>
+                                <td class="td1">
+                                    <af:outputLabel value="Payment Method" id="ol8"
+                                                    binding="#{backingBeanScope.backing_screen_master_purlist.ol8}"/>
+                                </td>
+                                <td class="td1">
+                                    <af:selectOneChoice id="soc3"
+                                                        binding="#{backingBeanScope.backing_screen_master_purlist.soc3}">
+                                        <af:selectItem label="Cheque" value="1" id="si3"
+                                                       binding="#{backingBeanScope.backing_screen_master_purlist.si3}"/>
+                                        <af:selectItem label="Cash" value="2" id="si8"
+                                                       binding="#{backingBeanScope.backing_screen_master_purlist.si8}"/>
+                                        <af:selectItem label="Bank Transfer" value="3" id="si9"
+                                                       binding="#{backingBeanScope.backing_screen_master_purlist.si9}"/>
+                                    </af:selectOneChoice>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td1">
+                                    <af:button text="SAVE" id="b1"
+                                               action="#{backingBeanScope.backing_screen_master_purlist.save}"
+                                               binding="#{backingBeanScope.backing_screen_master_purlist.b1}"/>
+                                </td>
+                                <td class="td1">
+                                    <af:button text="CANCEL" id="b2"
+                                               action="#{backingBeanScope.backing_screen_master_purlist.cancel}"
+                                               binding="#{backingBeanScope.backing_screen_master_purlist.b2}"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </af:panelWindow>
+                </af:popup>
+                <af:table var="row" rowBandingInterval="0" id="t1" rowSelection="single"
+                          selectionListener="#{backingBeanScope.backing_screen_master_purlist.selectionlist}"
+                          inlineStyle="width: 750px;" value="#{backingBeanScope.backing_screen_master_purlist.adfTable}"
+                          binding="#{backingBeanScope.backing_screen_master_purlist.t1}">
+                    <af:column sortable="false" headerText="Id" id="c1">
+                        <af:outputText value="#{row.iunit}" id="ot1"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Customer Name" id="c2">
+                        <af:outputText value="#{row.iname}" id="ot2"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Total Amount" id="c3">
+                        <af:outputText value="#{row.itotal}" id="ot3"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Status" id="c4">
+                        <af:outputText value="#{row.iqty}" id="ot4"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Terms" id="c5">
+                        <af:outputText value="#{row.icode}" id="ot5"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Payble Amount" id="c8">
+                        <af:outputText value="#{row.itax}" id="ot8"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Action" id="c7">
+                        <af:button id="bt1" text=""
+                                   inlineStyle=" background-color: transparent ; border: transparent 0cm ;"
+                                   icon="/icon/1467049919_settings-24.png" partialSubmit="true"
+                                   action="#{backingBeanScope.backing_screen_master_purlist.bt1_action}">
+                            <af:showPopupBehavior alignId="bt1" popupId="pop1" triggerType="action"/>
+                        </af:button>
+                    </af:column>
+                </af:table>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_purlist-->
+</f:view>

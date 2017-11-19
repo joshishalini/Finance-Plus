@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <managed-bean id="__1">
+    <managed-bean-name>backing_login</managed-bean-name>
+    <managed-bean-class>view.backing.Login</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1login.jsf-->
+  </managed-bean>
+  <managed-bean id="__2">
+    <managed-bean-name>backing_home</managed-bean-name>
+    <managed-bean-class>view.backing.Home</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1home.jsf-->
+  </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>backing_screen_master_cust</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Cust</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/cust.jsf-->
+  </managed-bean>
+  <managed-bean id="__4">
+    <managed-bean-name>backing_screen_master_supp</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Supp</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/supp.jsf-->
+  </managed-bean>
+  <managed-bean id="__5">
+    <managed-bean-name>backing_screen_master_product</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Product</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/product.jsf-->
+  </managed-bean>
+  <managed-bean id="__6">
+    <managed-bean-name>backing_screen_master_cate</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Cate</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/cate.jsf-->
+  </managed-bean>
+  <managed-bean id="__7">
+    <managed-bean-name>backing_screen_master_login</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Login</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/login.jsf-->
+  </managed-bean>
+  <managed-bean id="__8">
+    <managed-bean-name>backing_screen_master_invoice</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Invoice</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/invoice.jsf-->
+  </managed-bean>
+  <managed-bean id="__9">
+    <managed-bean-name>auto</managed-bean-name>
+    <managed-bean-class>view.auto</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/invoice.jsf-->
+  </managed-bean>
+  <managed-bean id="__10">
+    <managed-bean-name>backing_screen_master_prod</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Prod</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/prod.jsf-->
+  </managed-bean>
+  <managed-bean id="__11">
+    <managed-bean-name>backing_screen_master_product2</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Product</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/product.jsf-->
+  </managed-bean>
+  <managed-bean id="__12">
+    <managed-bean-name>backing_screen_master_pur</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Pur</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/pur.jsf-->
+  </managed-bean>
+  <managed-bean id="__13">
+    <managed-bean-name>backing_screen_master_invoicelist</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Invoicelist</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/invoicelist.jsf-->
+  </managed-bean>
+  <managed-bean id="__14">
+    <managed-bean-name>backing_screen_master_custdetail</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Custdetail</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/custdetail.jsf-->
+  </managed-bean>
+  <managed-bean id="__15">
+    <managed-bean-name>backing_screen_master_details</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Details</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/details.jsf-->
+  </managed-bean>
+  <managed-bean id="__16">
+    <managed-bean-name>backing_screen_master_generalvocher</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Generalvocher</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/generalvocher.jsf-->
+  </managed-bean>
+  <managed-bean id="__17">
+    <managed-bean-name>backing_screen_master_purlist</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Purlist</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/purlist.jsf-->
+  </managed-bean>
+  <managed-bean id="__18">
+    <managed-bean-name>backing_homepage</managed-bean-name>
+    <managed-bean-class>view.backing.Homepage</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1homepage.jsf-->
+  </managed-bean>
+  <managed-bean id="__19">
+    <managed-bean-name>backing_screen_master_untitled1</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Untitled1</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/untitled1.jsf-->
+  </managed-bean>
+  <managed-bean id="__20">
+    <managed-bean-name>backing_homee</managed-bean-name>
+    <managed-bean-class>view.backing.Homee</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1homee.jsf-->
+  </managed-bean>
+  <managed-bean id="__21">
+    <managed-bean-name>backing_screen_master_suppdetails</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Suppdetails</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/suppdetails.jsf-->
+  </managed-bean>
+  <managed-bean id="__22">
+    <managed-bean-name>backing_screen_master_suppdetail</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Suppdetail</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/suppdetail.jsf-->
+  </managed-bean>
+  <managed-bean id="__23">
+    <managed-bean-name>backing_screen_master_detailssupp</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Detailssupp</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/detailssupp.jsf-->
+  </managed-bean>
+  <managed-bean id="__24">
+    <managed-bean-name>backing_screen_master_prodlist</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Prodlist</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/prodlist.jsf-->
+  </managed-bean>
+  <managed-bean id="__25">
+    <managed-bean-name>backing_screen_master_company</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Company</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/company.jsf-->
+  </managed-bean>
+  <managed-bean id="__26">
+    <managed-bean-name>backing_dashboard</managed-bean-name>
+    <managed-bean-class>view.backing.Dashboard</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1dashboard.jsf-->
+  </managed-bean>
+  <managed-bean id="__27">
+    <managed-bean-name>backing_screen_master_gnrlvoucher</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Gnrlvoucher</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/gnrlvoucher.jsf-->
+  </managed-bean>
+  <managed-bean id="__28">
+    <managed-bean-name>backing_screen_master_logout</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Logout</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/logout.jsf-->
+  </managed-bean>
+  <managed-bean id="__29">
+    <managed-bean-name>backing_screen_master_tbal</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Tbal</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/tbal.jsf-->
+  </managed-bean>
+  <managed-bean id="__30">
+    <managed-bean-name>backing_screen_master_placc</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Placc</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/placc.jsf-->
+  </managed-bean>
+  <managed-bean id="__31">
+    <managed-bean-name>backing_screen_master_bsheet</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Bsheet</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/bsheet.jsf-->
+  </managed-bean>
+  <managed-bean id="__32">
+    <managed-bean-name>backing_screen_master_gl</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Gl</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/gl.jsf-->
+  </managed-bean>
+  <managed-bean id="__33">
+    <managed-bean-name>backing_screen_master_catelist</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Catelist</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/catelist.jsf-->
+  </managed-bean>
+  <managed-bean id="__34">
+    <managed-bean-name>backing_screen_master_booth_list</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Booth_list</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/booth_list.jsf-->
+  </managed-bean>
+  <managed-bean id="__35">
+    <managed-bean-name>backing_screen_master_staff_list</managed-bean-name>
+    <managed-bean-class>view.backing.screen.master.Staff_list</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1screen/master/staff_list.jsf-->
+  </managed-bean>
+</adfc-config>

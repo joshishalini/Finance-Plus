@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        beforePhase="#{backingBeanScope.backing_screen_master_invoice.bphase}">
+    <af:document title="invoice.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_invoice.d1}">
+        <af:resource type="css">
+            .tb1 {
+                width: 12%;
+                padding: 2px;
+            }
+        </af:resource>
+        <af:form id="f1" inlineStyle="overflow-x: hidden ;" binding="#{backingBeanScope.backing_screen_master_invoice.f1}">
+            <af:panelGroupLayout layout="vertical" styleClass="AFStretchWidth" inlineStyle="margin-left: 10px;">
+                <af:panelGroupLayout layout="horizontal">
+                    <af:outputLabel value="Invoice" inlineStyle="color:blue; font-size: 10pt;font-weight: normal;"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout layout="horizontal" inlineStyle="width: 60%">
+                    <af:panelGroupLayout layout="horizontal">
+                        <af:outputLabel value="Invoice Id:"/>
+                        <af:spacer width="40px"/>
+                        <af:inputText label="" id="it1" contentStyle="width: 100px;"
+                                      binding="#{backingBeanScope.backing_screen_master_invoice.it1}"/>
+                    </af:panelGroupLayout>
+                    <af:spacer width="5px"/>
+                    <af:panelGroupLayout layout="horizontal" inlineStyle="float:right; margin-right: 20px;">
+                        <af:outputLabel value="Invoice Date"/>
+                        <af:spacer width="-10px"/>
+                        <af:inputDate label="" id="id1" contentStyle="width: 100px; height: 20px;"
+                                      binding="#{backingBeanScope.backing_screen_master_invoice.id1}"/>
+                    </af:panelGroupLayout>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout layout="horizontal" inlineStyle="width: 66.5%">
+                    <af:panelGroupLayout layout="horizontal">
+                        <af:outputLabel value="Customer Name"/>
+                        <af:spacer width="5px"/>
+                        <af:inputText label="" id="it2" contentStyle="width: 225px;" autoComplete="on" autoSubmit="true"
+                                      binding="#{backingBeanScope.backing_screen_master_invoice.it2}"
+                                      valueChangeListener="#{backingBeanScope.backing_screen_master_invoice.custValChange}">
+                            <af:autoSuggestBehavior suggestedItems="#{auto.autoCust}"/>
+                        </af:inputText>
+                    </af:panelGroupLayout>
+                    <af:spacer width="10px"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout layout="horizontal" inlineStyle="width: 66.5%">
+                    <af:panelGroupLayout layout="horizontal">
+                        <af:outputLabel value="Billing Address"/>
+                        <af:spacer width="5px"/>
+                        <af:inputText label="" id="it3" rows="3" contentStyle="width: 225px; height: 60px;"
+                                      binding="#{backingBeanScope.backing_screen_master_invoice.it3}"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout layout="horizontal" inlineStyle="float:right; margin-right: 0px;">
+                        <af:outputLabel value="Shpping Address"/>
+                        <af:spacer width="5px"/>
+                        <af:inputText label="" id="it4" contentStyle="width: 225px; height: 60px;" rows="3"
+                                      binding="#{backingBeanScope.backing_screen_master_invoice.it4}"/>
+                    </af:panelGroupLayout>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout layout="horizontal" inlineStyle="width: 66.5%">
+                    <af:panelGroupLayout layout="horizontal">
+                        <af:outputLabel value="Phone Number"/>
+                        <af:spacer width="19px"/>
+                        <af:inputText label="" id="it5" contentStyle="width:200px;"
+                                      binding="#{backingBeanScope.backing_screen_master_invoice.it5}"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout layout="horizontal" inlineStyle="float:right; margin-right: 20px;">
+                        <af:outputLabel value="Email"/>
+                        <af:spacer width="15px"/>
+                        <af:inputText label="" id="it6" contentStyle="width: 205px;"
+                                      binding="#{backingBeanScope.backing_screen_master_invoice.it6}"/>
+                    </af:panelGroupLayout>
+                </af:panelGroupLayout>
+                <af:spacer height="5px" id="s1"/>
+                <af:panelGroupLayout layout="horizontal"
+                                     inlineStyle="height: 2px; min-height: 2px; border-bottom: #c2c2c2 solid 1px ; margin-right: 20px; "
+                                     styleClass="AFStretchWidth"></af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout layout="horizontal" inlineStyle="width: 66.5%">
+                    <af:panelGroupLayout layout="horizontal">
+                        <af:outputLabel value="Term"/>
+                        <af:spacer width="77px"/>
+                        <af:selectOneChoice id="soc1" binding="#{backingBeanScope.backing_screen_master_invoice.soc1}"
+                                            contentStyle="width: 100px;">
+                            <af:selectItem label="15 Days" value="15" id="si1"
+                                           binding="#{backingBeanScope.backing_screen_master_invoice.si1}"/>
+                            <af:selectItem label="30 Days" value="30" id="si2"
+                                           binding="#{backingBeanScope.backing_screen_master_invoice.si2}"/>
+                            <af:selectItem label="45 Days" value="45" id="si3"
+                                           binding="#{backingBeanScope.backing_screen_master_invoice.si3}"/>
+                            <af:selectItem label="60 Days" value="60" id="si4"
+                                           binding="#{backingBeanScope.backing_screen_master_invoice.si4}"/>
+                        </af:selectOneChoice>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout layout="horizontal" inlineStyle="float:right; margin-right: 20px;">
+                        <af:outputLabel value="Payment Methode"/>
+                        <af:selectOneChoice id="soc2" binding="#{backingBeanScope.backing_screen_master_invoice.soc2}"
+                                            contentStyle="width: 209px;">
+                            <af:selectItem label="CASH" value="CASH" id="si5"
+                                           binding="#{backingBeanScope.backing_screen_master_invoice.si5}"/>
+                            <af:selectItem label="CHEQUE" value="CHEQUE" id="si6"
+                                           binding="#{backingBeanScope.backing_screen_master_invoice.si6}"/>
+                            <af:selectItem label="BANK TRANSFER" value="BANK TRANSFER" id="si7"
+                                           binding="#{backingBeanScope.backing_screen_master_invoice.si7}"/>
+                        </af:selectOneChoice>
+                    </af:panelGroupLayout>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout layout="horizontal" inlineStyle="width: 66.5px; margin-left: 10px;">
+                    <af:table var="row" rowBandingInterval="0" id="t1" editingMode="editAll" contentDelivery="immediate"
+                              fetchSize="100" value="#{backingBeanScope.backing_screen_master_invoice.adfTable}"
+                              persist="ALL" binding="#{backingBeanScope.backing_screen_master_invoice.t1}"
+                              styleClass="AFStretchWidth" allDetailsEnabled="true">
+                        <af:column sortable="false" headerText="ITEM CODE" id="c1">
+                            <af:inputText id="it7" label="" value="#{row.icode}" disabled="true"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="ITEM NAME" id="c2">
+                            <af:inputText label="" id="it8" autoSubmit="true" autoComplete="on"
+                                          valueChangeListener="#{backingBeanScope.backing_screen_master_invoice.productval}"
+                                          value="#{row.iname}">
+                                <af:autoSuggestBehavior suggestedItems="#{auto.autoProduct}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortable="false" headerText="QUANTITY" id="c3">
+                            <af:inputText label="" id="it9" value="#{row.iqty}"
+                                          valueChangeListener="#{backingBeanScope.backing_screen_master_invoice.qtyChange}"
+                                          autoSubmit="true"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="UNIT" id="c4">
+                            <af:inputText label="" id="it10" value="#{row.iunit}" disabled="true"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="PRICE" id="c5">
+                            <af:inputText label="" id="it11" value="#{row.iprice}" valueChangeListener="#{backingBeanScope.backing_screen_master_invoice.priceChange}" autoSubmit="true"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="AMOUNT" id="c6">
+                            <af:inputText label="" id="it12" value="#{row.iamount}"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="TAX" id="c7">
+                            <af:inputText label="" id="it13" value="#{row.itax}" disabled="true"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="TOTAL" id="c8">
+                            <af:inputText label="" id="it14" value="#{row.itotal}"/>
+                        </af:column>
+                    </af:table>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout>
+                    <af:button text="Add New Row"
+                               inlineStyle="width: 120px;font-family:Verdana; font-size:10.0pt; font-effect:emboss; font-smooth:always; font-style:normal;text-align:center;vertical-align:middle;padding:5px 10px;text-transform: uppercase;"
+                               id="b1" binding="#{backingBeanScope.backing_screen_master_invoice.b1}"
+                             action="#{backingBeanScope.backing_screen_master_invoice.add}"
+                               />
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+            <af:spacer height="5px"/>
+            <af:panelGroupLayout layout="vertical" inlineStyle="width: 66.5%; float: right;">
+                <af:panelGroupLayout layout="horizontal">
+                    <af:outputLabel value="Amount Before Tax"/>
+                    <af:spacer width="5px"/>
+                    <af:inputText label="" id="it16" contentStyle="width: 205px;"
+                                  binding="#{backingBeanScope.backing_screen_master_invoice.it16}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout layout="horizontal">
+                    <af:outputLabel value="Tax Class"/>
+                    <af:spacer width="75px"/>
+                    <af:inputText label="" id="it19" binding="#{backingBeanScope.backing_screen_master_invoice.it19}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout layout="horizontal">
+                    <af:outputLabel value="Tax Amount"/>
+                    <af:spacer width="60px"/>
+                    <af:inputText label="" id="it17" contentStyle="width: 205px;"
+                                  binding="#{backingBeanScope.backing_screen_master_invoice.it17}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout layout="horizontal">
+                    <af:outputLabel value="Total"/>
+                    <af:spacer width="104px"/>
+                    <af:inputText label="" id="it18" binding="#{backingBeanScope.backing_screen_master_invoice.it18}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="20px"/>
+                <af:panelGroupLayout layout="horizontal" inlineStyle="width:40px;">
+                    <af:button text="Save" id="b2"
+                               inlineStyle="font-family:Verdana; font-size:10.0pt; font-effect:emboss; font-smooth:always; font-style:normal;text-align:center;vertical-align:middle;padding:5px 10px;text-transform: uppercase;"
+                               binding="#{backingBeanScope.backing_screen_master_invoice.b2}"
+                         action="#{backingBeanScope.backing_screen_master_invoice.save}" />
+                    <af:spacer width="5px"/>
+                    <af:button text="Cancel" id="b3"
+                               inlineStyle="font-family:Verdana; font-size:10.0pt; font-effect:emboss; font-smooth:always; font-style:normal;text-align:center;vertical-align:middle;padding:5px 10px;text-transform: uppercase;"
+                               binding="#{backingBeanScope.backing_screen_master_invoice.b3}" 
+                                action="#{backingBeanScope.backing_screen_master_invoice.cancel}" />
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                      binding="#{backingBeanScope.backing_screen_master_invoice.p1}">
+                <af:panelWindow id="pw1" binding="#{backingBeanScope.backing_screen_master_invoice.pw1}" inlineStyle="width:800px;height:600px" title="Invoice">
+                    <af:inlineFrame id="if1" binding="#{backingBeanScope.backing_screen_master_invoice.if1}" source="/showrpt" inlineStyle="width:780px;height: 550px;"/>
+                </af:panelWindow>
+            </af:popup>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_invoice-->
+</f:view>

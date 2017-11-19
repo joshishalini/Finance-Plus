@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="homee.jsf" id="d1" binding="#{backingBeanScope.backing_homee.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_homee.f1}">
+            <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_homee.pgl1}">
+                <af:gridRow height="50px" id="gr2" binding="#{backingBeanScope.backing_homee.gr2}">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2"
+                                 binding="#{backingBeanScope.backing_homee.gc2}">
+                    <af:panelGroupLayout id="pgl3" inlineStyle="background-color: #006394; box-shadow: #94b5ff 2px 2px 1px;" ></af:panelGroupLayout>
+                        <!-- Header -->
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr1" binding="#{backingBeanScope.backing_homee.gr1}">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1"
+                                 binding="#{backingBeanScope.backing_homee.gc1}">
+                     <af:panelSplitter splitterPosition="100" id="ps1"
+                                          binding="#{backingBeanScope.backing_homee.ps1}">                              <f:facet name="first">
+                                <!-- Left -->
+                            </f:facet>
+                            <f:facet name="second">
+                                <af:panelGroupLayout layout="scroll" id="pgl2"
+                                                     binding="#{backingBeanScope.backing_homee.pgl2}">
+                           </af:panelGroupLayout>
+                            </f:facet>
+                        </af:panelSplitter>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="50px" id="gr3" binding="#{backingBeanScope.backing_homee.gr3}">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc3"
+                                 binding="#{backingBeanScope.backing_homee.gc3}">
+                        <af:panelGroupLayout id="pgl5" inlineStyle="background-color: #004a73; box-shadow: #c6d6ff 2px 2px 1px;"></af:panelGroupLayout>
+                        
+                        <!-- Footer -->
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_homee-->
+</f:view>

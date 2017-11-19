@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" beforePhase="#{backingBeanScope.backing_screen_master_supp.bPhase}">
+    <af:document title="supp.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_supp.d1}">
+        <af:resource type="css">
+            .td1 {
+                width: 12%;
+                padding: 2px;
+            }
+        </af:resource>
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_supp.f1}">
+            <table>
+                <tr>
+                    <td class="td1">
+                        <af:outputLabel value="Supplier's Details" id="ol1"
+                                        inlineStyle="font-family:Verdana;color:Blue;font-size:12pt;"
+                                        binding="#{backingBeanScope.backing_screen_master_supp.ol1}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="td1">
+                        <af:outputLabel value="Account No" id="ol3"
+                                        binding="#{backingBeanScope.backing_screen_master_supp.ol3}"/>
+                    </td>
+                    <td class="td1">
+                        <af:inputText label="" id="it2" binding="#{backingBeanScope.backing_screen_master_supp.it2}"/>
+                    </td>
+                    <td class="td1">
+                        <af:outputLabel value="Name" id="ol2"
+                                        binding="#{backingBeanScope.backing_screen_master_supp.ol2}"/>
+                    </td>
+                    <td class="td1">
+                        <af:inputText label="" id="it1" binding="#{backingBeanScope.backing_screen_master_supp.it1}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="td1">
+                        <af:outputLabel value="Shipping Details" id="ol5"
+                                        inlineStyle="font-family:Verdana;font-size:12pt;color:Blue;"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="td1">
+                        <af:outputLabel value="Line1" id="ol4"
+                                        binding="#{backingBeanScope.backing_screen_master_supp.ol4}"/>
+                    </td>
+                    <td class="td1">
+                        <af:inputText label="" id="it3" binding="#{backingBeanScope.backing_screen_master_supp.it3}"/>
+                    </td>
+                    <td class="td1">
+                        <af:outputLabel value="Line2" id="ol6"/>
+                    </td>
+                    <td class="td1">
+                        <af:inputText label="" id="it4" binding="#{backingBeanScope.backing_screen_master_supp.it4}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="td1">
+                        <af:outputLabel value="City" id="ol7"/>
+                    </td>
+                    <td class="td1">
+                        <af:inputText label="" id="it5" binding="#{backingBeanScope.backing_screen_master_supp.it5}"/>
+                    </td>
+                    <td class="td1">
+                        <af:outputLabel value="State" id="ol8"/>
+                    </td>
+                    <td class="td1">
+                        <af:inputText label="" id="it6" binding="#{backingBeanScope.backing_screen_master_supp.it6}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="td1" height="32">
+                        <af:outputLabel value="Country" id="ol9"/>
+                    </td>
+                    <td class="td1" height="32">
+                        <af:inputText label="" id="it7" binding="#{backingBeanScope.backing_screen_master_supp.it7}"/>
+                    </td>
+                    <td class="td1" height="32">
+                        <af:outputLabel value="Pin Code" id="ol10"/>
+                    </td>
+                    <td class="td1" height="32">
+                        <af:inputText label="" id="it8" binding="#{backingBeanScope.backing_screen_master_supp.it8}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="td1">
+                        <af:outputLabel value="MObile NO." id="ol11"
+                                        binding="#{backingBeanScope.backing_screen_master_supp.ol11}"/>
+                    </td>
+                    <td class="td1">
+                        <af:inputText label="" id="it9" binding="#{backingBeanScope.backing_screen_master_supp.it9}"/>
+                    </td>
+                    <td class="td1">
+                        <af:outputLabel value="Phone NO" id="ol12"
+                                        binding="#{backingBeanScope.backing_screen_master_supp.ol12}"/>
+                    </td>
+                    <td class="td1">
+                        <af:inputText label="" id="it10" binding="#{backingBeanScope.backing_screen_master_supp.it10}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="td1">
+                        <af:outputLabel value="E-Mail" id="ol13"
+                                        binding="#{backingBeanScope.backing_screen_master_supp.ol13}"/>
+                    </td>
+                    <td class="td1">
+                        <af:inputText label="" id="it11" binding="#{backingBeanScope.backing_screen_master_supp.it11}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="td1">
+                        <af:button text="Save" id="b1"
+                                   inlineStyle="font-family:Verdana; font-size:10.0pt; font-effect:emboss; font-smooth:always; font-style:normal;text-align:center;vertical-align:middle;padding:5px 10px;text-transform: uppercase; "
+                                   binding="#{backingBeanScope.backing_screen_master_supp.b1}"
+                                   action="#{backingBeanScope.backing_screen_master_supp.save}"/>
+                    </td>
+                </tr>
+            </table>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                      binding="#{backingBeanScope.backing_screen_master_supp.p1}">
+                <af:dialog id="d2" type="ok" binding="#{backingBeanScope.backing_screen_master_supp.d2}">
+                    <f:facet name="buttonBar"/>
+                    <af:outputLabel value="Recoard Added Sucessfully!!!" id="ol14"
+                                    binding="#{backingBeanScope.backing_screen_master_supp.ol14}"/>
+                </af:dialog>
+            </af:popup>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_supp-->
+</f:view>

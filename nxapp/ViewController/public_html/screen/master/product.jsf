@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        beforePhase="#{backingBeanScope.backing_screen_master_product.bPhase}">
+    <af:document title="product.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_product.d1}">
+        <af:resource type="css">
+            .tb3 {
+                width: 12%;
+                padding: 2px;
+            }
+        </af:resource>
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_product.f1}">
+            <table>
+                <tr>
+                    <td class="tb3">
+                        <af:outputLabel value="Product Details" id="ol1" inlineStyle="color:#5252ff;"
+                                        binding="#{backingBeanScope.backing_screen_master_product.ol1}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="tb3">
+                        <af:outputLabel value="Product Id" id="ol2"
+                                        binding="#{backingBeanScope.backing_screen_master_product.ol2}"/>
+                    </td>
+                    <td class="tb3">
+                        <af:inputText label="" id="it1"
+                                      binding="#{backingBeanScope.backing_screen_master_product.it1}"/>
+                    </td>
+                    <td class="tb3">
+                        <af:outputLabel value="name" id="ol3"
+                                        binding="#{backingBeanScope.backing_screen_master_product.ol3}"/>
+                    </td>
+                    <td class="tb3">
+                        <af:inputText label="" id="it2"
+                                      binding="#{backingBeanScope.backing_screen_master_product.it2}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="tb3">
+                        <af:outputLabel value="Category" id="ol4"
+                                        binding="#{backingBeanScope.backing_screen_master_product.ol4}"/>
+                    </td>
+                    <td class="tb3">
+                        <af:inputText label="" id="it3" autoComplete="on" autoSubmit="true" valueChangeListener="#{backingBeanScope.backing_screen_master_product.catechange}"
+                                      binding="#{backingBeanScope.backing_screen_master_product.it3}">
+                                <af:autoSuggestBehavior suggestedItems="#{auto.autoCate}"/>
+                                </af:inputText>
+                    </td>
+                    <td class="tb3">
+                        <af:outputLabel value="Price" id="ol5"
+                                        binding="#{backingBeanScope.backing_screen_master_product.ol5}"/>
+                    </td>
+                    <td class="tb3">
+                        <af:inputText label="" id="it4"
+                                      binding="#{backingBeanScope.backing_screen_master_product.it4}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="tb3">
+                        <af:outputLabel value="Sales Account" id="ol6"
+                                        binding="#{backingBeanScope.backing_screen_master_product.ol6}"/>
+                    </td>
+                    <td class="tb3">
+                        <af:inputText label="" id="it5"
+                                      binding="#{backingBeanScope.backing_screen_master_product.it5}"/>
+                    </td>
+                    <td class="tb3">
+                        <af:outputLabel value="Opening Quantity" id="ol7"
+                                        binding="#{backingBeanScope.backing_screen_master_product.ol7}"/>
+                    </td>
+                    <td class="tb3">
+                        <af:inputText label="" id="it6"
+                                      binding="#{backingBeanScope.backing_screen_master_product.it6}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="tb3">
+                        <af:outputLabel value="Opening Balance" id="ol8"
+                                        binding="#{backingBeanScope.backing_screen_master_product.ol8}"/>
+                    </td>
+                    <td class="tb3">
+                        <af:inputText label="" id="it7"
+                                      binding="#{backingBeanScope.backing_screen_master_product.it7}"/>
+                    </td>
+                    <td class="td1">
+                        <af:outputLabel value="Unit" id="ol13"
+                                        binding="#{backingBeanScope.backing_screen_master_product.ol13}"/>
+                    </td>
+                                        <td class="td1">
+                        <af:inputText label="" id="it10"
+                                      binding="#{backingBeanScope.backing_screen_master_product.it10}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="tb3">
+                        <af:outputLabel value="Product Category" id="ol9" inlineStyle="color:#5252ff;"
+                                        binding="#{backingBeanScope.backing_screen_master_product.ol9}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td class="tb3">
+                        <af:outputLabel value="Id" id="ol10"
+                                        binding="#{backingBeanScope.backing_screen_master_product.ol10}"/>
+                    </td>
+                    <td class="tb3">
+                        <af:inputText label="" id="it8" 
+                                      binding="#{backingBeanScope.backing_screen_master_product.it8}"/>
+                    </td>
+                    <td class="tb3">
+                        <af:outputLabel value="Name" id="ol11"
+                                        binding="#{backingBeanScope.backing_screen_master_product.ol11}"/>
+                    </td>
+                    <td class="tb3">
+                        <af:inputText label="" id="it9" 
+                                      binding="#{backingBeanScope.backing_screen_master_product.it9}"/>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    
+                        <td class="tb3">
+                            <af:button text="save" id="b1"
+                                       inlineStyle="font-family:Verdana; font-size:10.0pt; font-effect:emboss; font-smooth:always; font-style:normal;text-align:center;vertical-align:middle;padding:5px 10px;text-transform: uppercase;"
+                                       binding="#{backingBeanScope.backing_screen_master_product.b1}"
+                                       action="#{backingBeanScope.backing_screen_master_product.save}"/>
+                        </td>
+                </tr>
+            </table>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p1" 
+                      binding="#{backingBeanScope.backing_screen_master_product.p1}">
+                <af:dialog type="ok" id="d2" binding="#{backingBeanScope.backing_screen_master_product.d2}">
+                    <f:facet name="buttonBar"/>
+                    <af:outputLabel value="Record Successfully Added" id="ol12"
+                                    binding="#{backingBeanScope.backing_screen_master_product.ol12}"/>
+                </af:dialog>
+            </af:popup>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_product-->
+</f:view>

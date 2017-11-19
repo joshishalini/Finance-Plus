@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="logout.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_logout.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_logout.f1}"></af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_logout-->
+</f:view>

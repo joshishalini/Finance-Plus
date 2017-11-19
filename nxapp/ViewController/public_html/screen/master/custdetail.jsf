@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        beforePhase="#{backingBeanScope.backing_screen_master_custdetail.bphase}">
+    <af:document title="custdetail.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_custdetail.d1}">
+        <af:resource type="css">
+            .tb1 {
+                width: 12%;
+                padding: 2px;
+            }
+        </af:resource>
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_custdetail.f1}">
+            <af:panelGroupLayout id="pgl1" layout="vertical" styleClass="AFStretchWidth"
+                                 inlineStyle="margin-left: 10px;"
+                                 binding="#{backingBeanScope.backing_screen_master_custdetail.pgl1}">
+                 <af:spacer height="20px"/>
+                <af:panelGroupLayout id="pgl3" binding="#{backingBeanScope.backing_screen_master_custdetail.pgl3}">
+                    <af:outputLabel value="Customer List" id="ol3" inlineStyle="color: #000052;margin-bottom: 10px;font-family: 'Arial Black';font-size: 21pt"
+                                    binding="#{backingBeanScope.backing_screen_master_custdetail.ol3}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="20px" />
+                <af:panelGroupLayout id="pgl2" layout="horizontal" styleClass="AFStretchWidth"
+                                     inlineStyle="margin-left: 10px;"
+                                     binding="#{backingBeanScope.backing_screen_master_custdetail.pgl2}">
+                    <af:outputLabel value="Choice" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_custdetail.ol1}"/>
+                    <af:selectOneChoice autoSubmit="true"
+                                        valueChangeListener="#{backingBeanScope.backing_screen_master_custdetail.choicechange}"
+                                        id="soc1" binding="#{backingBeanScope.backing_screen_master_custdetail.soc1}">
+                        <af:selectItem label="By Name" value="By Name" id="si1"
+                                       binding="#{backingBeanScope.backing_screen_master_custdetail.si1}"/>
+                        <af:selectItem label="By Id" value="By Id" id="si2"
+                                       binding="#{backingBeanScope.backing_screen_master_custdetail.si2}"/>
+                        <af:selectItem label="By All" value="By All" id="si3"
+                                       binding="#{backingBeanScope.backing_screen_master_custdetail.si3}"/>
+                        <af:selectItem label="By Mobile No" value="By Mobile NO" id="si4"
+                                       binding="#{backingBeanScope.backing_screen_master_custdetail.si4}"/>
+                    </af:selectOneChoice>
+                    <af:outputLabel value="Filter" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_custdetail.ol2}"/>
+                    <af:inputText label="" id="it1" autoSubmit="true"
+                                  valueChangeListener="#{backingBeanScope.backing_screen_master_custdetail.valchange}"
+                                  binding="#{backingBeanScope.backing_screen_master_custdetail.it1}"/>
+                    <af:button text="Create new Customer" id="b3" inlineStyle="width:170px;height: 30px;margin-right:100px;font-size: 10pt;padding-left: 17px; " action="#{backingBeanScope.backing_screen_master_custdetail.create}"
+                               binding="#{backingBeanScope.backing_screen_master_custdetail.b3}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="20px"/>
+                <af:table var="row" rowBandingInterval="0" id="t1" rowSelection="single" inlineStyle="width: 739px"
+                          selectionListener="#{backingBeanScope.backing_screen_master_custdetail.selectionlist}"
+                          value="#{backingBeanScope.backing_screen_master_custdetail.adfTable}"
+                          binding="#{backingBeanScope.backing_screen_master_custdetail.t1}">
+                    <af:column sortable="false" headerText="Id" id="c1">
+                        <af:outputText value="#{row.iunit}" id="ot1"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Name" id="c2">
+                        <af:outputText value="#{row.iname}" id="ot2"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Email" id="c3">
+                        <af:outputText value="#{row.iprice}" id="ot3"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Phone NO" id="c4">
+                        <af:outputText value="#{row.iqty}" id="ot4"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Address" id="c5">
+                        <af:outputText value="#{row.itax}" id="ot5"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Edit" id="c6">
+                        <af:button text="" id="b2" action="#{backingBeanScope.backing_screen_master_custdetail.edit}" partialSubmit="true" inlineStyle=" background-color: transparent ; border: transparent 0cm ;" icon="/icon/Pencil-icon.png" />
+                    </af:column>
+                    <af:column sortable="false" headerText="Details" id="c7">
+                        <af:button text="Details"  action="#{backingBeanScope.backing_screen_master_custdetail.detsils}" id="b1"/>
+                    </af:column>
+                </af:table>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_custdetail-->
+</f:view>

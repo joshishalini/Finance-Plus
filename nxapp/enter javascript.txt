@@ -1,0 +1,15 @@
+        <af:resource type="javascript">
+          function handleEnterEvent(evt) {
+              var _keyCode = evt.getKeyCode();
+              //check for Enter Key
+              if (_keyCode == AdfKeyStroke.ENTER_KEY) {
+                  var comp = evt.getSource();
+                  AdfCustomEvent.queue(comp, "EnterEvent", 
+                  {
+                      fvalue : comp.getSubmittedValue()
+                  },
+false);
+              }
+          }
+          evt.cancel();
+        </af:resource>

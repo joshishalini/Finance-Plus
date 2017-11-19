@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bl1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="148d82d5-b269-41a6-a0ce-7c1a4ea7797e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="p1" class="java.lang.String"/>
+	<parameter name="d1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from bllai order by lcode]]>
+	</queryString>
+	<field name="idbllai" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="accname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lcode" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bal" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="bal_1" class="java.math.BigDecimal" resetType="Group" resetGroup="qbc" calculation="Sum">
+		<variableExpression><![CDATA[$F{bal}]]></variableExpression>
+	</variable>
+	<variable name="bal_2" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{bal}]]></variableExpression>
+	</variable>
+	<group name="qbc">
+		<groupExpression><![CDATA[$F{dis}]]></groupExpression>
+		<groupHeader>
+			<band height="23">
+				<textField>
+					<reportElement x="11" y="3" width="243" height="18" uuid="7cbd974c-7ca3-4556-8dbb-10adc88c2f6f"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dis}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="12" y="21" width="255" height="1" uuid="48655768-fe6f-473f-8703-84df90a95659"/>
+					<graphicElement>
+						<pen lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="31">
+				<line>
+					<reportElement x="381" y="6" width="141" height="1" uuid="072f23c6-ff85-44e0-88e1-49f148f9ebce"/>
+				</line>
+				<line>
+					<reportElement x="381" y="27" width="141" height="1" uuid="51f4e9bc-3e0c-488c-a0ef-6ebfa48c2085"/>
+				</line>
+				<textField pattern="#,##0.00">
+					<reportElement x="395" y="8" width="117" height="18" uuid="6b0ae1c1-9c33-42ed-a847-7d80d76a12e6"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{bal_1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="290" y="8" width="82" height="18" uuid="8e989927-d36d-4b7f-bd47-925e1872935e"/>
+					<textElement textAlignment="Right">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="215" y="0" width="100" height="20" uuid="f676d02e-8893-44fc-8017-ce68610cd98c"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="315" y="20" width="100" height="20" uuid="b740429a-eea9-4e15-b94c-72023a999eed"/>
+				<textFieldExpression><![CDATA[$P{d1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="2" width="100" height="20" uuid="8f7d5457-b04a-4c33-9b0d-f60ecea798de"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laibilites]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="2" width="100" height="20" uuid="7a8c8bee-fad0-48b8-b096-e51fdd94fabe"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="23" width="555" height="1" uuid="c8cef46c-bc12-4692-96f3-089dded95bc8"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="11" y="3" width="345" height="20" uuid="d0fb2403-b3f3-4aec-a1e8-eb83d2b74545"/>
+				<textFieldExpression><![CDATA[$F{accname}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="395" y="3" width="117" height="20" uuid="453918f6-c709-4f96-bf1e-3af1bcc95987"/>
+				<textFieldExpression><![CDATA[$F{bal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="290" y="8" width="82" height="18" uuid="ca439b74-551f-4119-aedd-5f0d87ff81e7"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grand Total]]></text>
+			</staticText>
+			<textField pattern="#,##0.00">
+				<reportElement x="395" y="8" width="117" height="18" uuid="ea0fcce6-4ea5-4da8-963e-1687ba2cfa8e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{bal_2}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="267" y="4" width="255" height="1" uuid="e59ad6b2-05ad-4aab-814f-5986a763c1c0"/>
+			</line>
+			<line>
+				<reportElement x="267" y="28" width="255" height="1" uuid="4a5e7d7b-06c1-4eda-bc5e-6cb8b53cff9c"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

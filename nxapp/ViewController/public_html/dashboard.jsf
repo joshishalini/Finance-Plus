@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        beforePhase="#{backingBeanScope.backing_dashboard.bphase}">
+    <af:document title="dashboard.jsf" id="d1" binding="#{backingBeanScope.backing_dashboard.d1}">
+        <af:resource type="css">
+            .logo {
+                color: #fff;
+                font-family: 'Rouge Script', cursive;
+                font-size: 30px;
+                font-weight: normal;
+                line-height: 48px;
+                margin: 0 0 50px;
+                text-align: center;
+                text-shadow: 1px 1px 2px #082b34;
+            }
+        </af:resource>
+        <af:form id="f1" inlineStyle="overflow-x: hidden ;" binding="#{backingBeanScope.backing_dashboard.f1}">
+            <af:panelGridLayout id="pgl2" binding="#{backingBeanScope.backing_dashboard.pgl2}">
+                <af:gridRow height="50px" id="gr1" binding="#{backingBeanScope.backing_dashboard.gr1}">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc3"
+                                 binding="#{backingBeanScope.backing_dashboard.gc3}"
+                                 inlineStyle="background-color:#039BE5;box-shadow:  2px 2px 1px rgb(194, 194, 194);">
+                        <!-- Header -->
+                        <af:panelGroupLayout layout="horizontal" inlineStyle="width: 100%;" id="pgl3"
+                                             styleClass="AFStretchWidth">
+                            <af:outputLabel value="Finance+" styleClass="logo"/>
+                            <af:panelGroupLayout layout="horizontal"
+                                                 inlineStyle="margin-right: 20px;float: right; height:50px; width: 301px;cursor: pointer;"
+                                                 id="pgl6">
+                                <af:showPopupBehavior alignId="ol1" triggerType="click" popupId="p1" align="overlap"/>
+                                <af:outputLabel value="" id="ol1"
+                                                inlineStyle="color:#fff;font-weight: 600;font-size: 13px;margin-left:5px; margin-top:  8px;  cursor: pointer;"
+                                                binding="#{backingBeanScope.backing_dashboard.ol1}"></af:outputLabel>
+                                <af:image source="/icon/ic_settings_white_24dp_1x.png" id="i1"
+                                          inlineStyle="width: 24px; height: 24px;margin-top:0px ; "/>
+                                <af:popup id="p1" childCreation="immediate" animate="default">
+                                    <af:panelWindow inlineStyle="margin-top: 35px; width: 295px; border-radius: 0px; margin-left: 0px; padding: 0px;">
+                                        <af:panelGroupLayout id="pgl1" layout="vertical">
+                                          <!--   <af:panelGroupLayout layout="horizontal">
+                                               <af:outputLabel value="Create" id="ol3"
+                                                                binding="#{backingBeanScope.backing_dashboard.ol3}"/>
+                                            </af:panelGroupLayout>-->
+                                            <af:panelGroupLayout inlineStyle="margin-top: -10px;"   layout="horizontal">
+                                                <af:link text="customer" icon="/icon/friendly-agents.jpg" id="l18" partialSubmit="true"
+                                                         binding="#{backingBeanScope.backing_dashboard.l18}"
+                                                         action="#{backingBeanScope.backing_dashboard.customer}"/>
+                                           
+                                                <af:link text="Supplier" icon="/icon/a.png" id="l19" partialSubmit="true"
+                                                         binding="#{backingBeanScope.backing_dashboard.l19}"
+                                                         action="#{backingBeanScope.backing_dashboard.supplier}"/>
+                                            </af:panelGroupLayout>
+                                            <af:spacer height="6px" />
+                                            <af:panelGroupLayout layout="horizontal">
+                                                <af:link text="Product" icon="/icon/ww.png" id="l20" partialSubmit="true"
+                                                         binding="#{backingBeanScope.backing_dashboard.l20}"
+                                                         action="#{backingBeanScope.backing_dashboard.prodt}"/>
+                                                <af:spacer width="8px"/>
+                                                <af:link text="Category" icon="/icon/dd.png" id="l21" partialSubmit="true"
+                                                        binding="#{backingBeanScope.backing_dashboard.l21}"
+                                                         action="#{backingBeanScope.backing_dashboard.cate}"/>
+                                            </af:panelGroupLayout>
+                                            <af:panelGroupLayout layout="vertical">
+                                                <af:link text="Logout" id="l22"
+                                                         binding="#{backingBeanScope.backing_dashboard.l22}"
+                                                         action="#{backingBeanScope.backing_dashboard.logout}"
+                                                         inlineStyle="color:#000; float: right; font-size: 20pt;font-weight: bold; margin-right: 10.0px;"/>
+                                            </af:panelGroupLayout>
+                                        </af:panelGroupLayout>
+                                    </af:panelWindow>
+                                </af:popup>
+                                <!--       <af:panelGroupLayout layout="horizontal" >
+                                    <af:outputLabel value="USER :" id="ol2" inlineStyle="color:#fff;font-weight: 600; "
+                                                    binding="#{backingBeanScope.backing_dashboard.ol2}"/>
+                                    <af:outputLabel value="ADMIN" id="ol3" inlineStyle="color:#fff;font-weight: 600; "
+                                                    binding="#{backingBeanScope.backing_dashboard.ol3}"/>
+                                    <af:button text="" id="b1" inlineStyle="border: none ;background: transparent ;" icon="/skins/images/s.png"/>
+                                </af:panelGroupLayout>-->
+                            </af:panelGroupLayout>
+                        </af:panelGroupLayout>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr3" binding="#{backingBeanScope.backing_dashboard.gr3}"
+                            inlineStyle="border-radius: 0px;">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1"
+                                 binding="#{backingBeanScope.backing_dashboard.gc1}" inlineStyle="border-radius: 0px;">
+                        <af:panelSplitter splitterPosition="180" id="ps1" inlineStyle="border-radius: 0px;"
+                                          binding="#{backingBeanScope.backing_dashboard.ps1}">
+                            <f:facet name="first">
+                                <af:panelGroupLayout layout="vertical"
+                                                     inlineStyle="height: 100vh;background: #7f7f7f;border-radius: 0px;">
+                                    <af:panelAccordion id="pa1" discloseMany="true"
+                                                       binding="#{backingBeanScope.backing_dashboard.pa1}">
+                                        <af:showDetailItem text="Master" id="sdi1" disclosed="true"
+                                                           binding="#{backingBeanScope.backing_dashboard.sdi1}">
+                                            <af:link text="customer" id="l1" partialSubmit="true"
+                                                     binding="#{backingBeanScope.backing_dashboard.l1}"
+                                                     action="#{backingBeanScope.backing_dashboard.cust}"/>
+                                            <af:link text="supplier" id="l2"
+                                                     binding="#{backingBeanScope.backing_dashboard.l2}"
+                                                     action="#{backingBeanScope.backing_dashboard.supp}"/>
+                                            <af:link text="product" id="l3"
+                                                     binding="#{backingBeanScope.backing_dashboard.l3}"
+                                                     action="#{backingBeanScope.backing_dashboard.product}"/>
+                                            <af:link text="product category" id="l4"
+                                                     binding="#{backingBeanScope.backing_dashboard.l4}"
+                                                     action="#{backingBeanScope.backing_dashboard.proc}"/>
+                                        </af:showDetailItem>
+                                                   <af:showDetailItem disclosed="true" text="Transaction" id="sdi3"
+                                                           binding="#{backingBeanScope.backing_dashboard.sdi3}">
+                                            <af:link text="sales invoice" id="l9"
+                                                     action="#{backingBeanScope.backing_dashboard.invoice}"
+                                                     binding="#{backingBeanScope.backing_dashboard.l9}"/>
+                                            <af:link text="purchase" id="l10"
+                                                     action="#{backingBeanScope.backing_dashboard.pur}"
+                                                     binding="#{backingBeanScope.backing_dashboard.l10}"/>
+                                            <af:link text="jounral entries" id="l11"
+                                                     action="#{backingBeanScope.backing_dashboard.general}"
+                                                     binding="#{backingBeanScope.backing_dashboard.l11}"/>
+                                        </af:showDetailItem>
+                                    <af:showDetailItem text="Reports" id="sdi2" disclosed="true"
+                                                           binding="#{backingBeanScope.backing_dashboard.sdi2}">
+                                            <af:link text="Sales Report" id="l5"
+                                                     action="#{backingBeanScope.backing_dashboard.sales}"
+                                                     binding="#{backingBeanScope.backing_dashboard.l5}"/>
+                                            <af:link text="profit loss account" id="l6"
+                                                     action="#{backingBeanScope.backing_dashboard.pl}"
+                                                     binding="#{backingBeanScope.backing_dashboard.l6}"/>
+                                            <af:link text="Balance sheet" id="l7"
+                                                     action="#{backingBeanScope.backing_dashboard.bl1}"
+                                                     binding="#{backingBeanScope.backing_dashboard.l7}"/>
+                                            <af:link text="Purchase Report" id="l8"
+                                                     action="#{backingBeanScope.backing_dashboard.purr}"
+                                                     binding="#{backingBeanScope.backing_dashboard.l8}"/>
+                                        </af:showDetailItem>
+                                    </af:panelAccordion>
+                                </af:panelGroupLayout>
+                            </f:facet>
+                            <f:facet name="second">
+                                <af:panelGroupLayout layout="scroll"
+                                                     binding="#{backingBeanScope.backing_dashboard.pgl1}">
+                                    <af:inlineFrame id="if1" binding="#{backingBeanScope.backing_dashboard.if1}"
+                                                    inlineStyle="height: 100vh;margin: 5px;"
+                                                    styleClass="AFStretchWidth"/>
+                                </af:panelGroupLayout>
+                            </f:facet>
+                        </af:panelSplitter>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="50px" id="gr2" binding="#{backingBeanScope.backing_dashboard.gr2}">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2"
+                                 binding="#{backingBeanScope.backing_dashboard.gc2}"
+                                 inlineStyle="background-color:#0277BD ;box-shadow:  -2px -2px 1px rgb(194, 194, 194);">
+                        <af:panelGroupLayout layout="horizontal" inlineStyle="background: #0288D1;">
+                        </af:panelGroupLayout>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_dashboard-->
+</f:view>
+

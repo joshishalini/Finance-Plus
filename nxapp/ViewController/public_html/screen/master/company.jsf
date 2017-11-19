@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core"  xmlns:af="http://xmlns.oracle.com/adf/faces/rich"  >
+    <af:document title="company.jsf" id="d1"   binding="#{backingBeanScope.backing_screen_master_company.d1}">
+        <af:form id="f1"  binding="#{backingBeanScope.backing_screen_master_company.f1}">
+            <af:panelGroupLayout id="pgl3" layout="vertical">
+                        <af:spacer height="20px" />        
+                <af:panelGroupLayout id="pgk9" layout="horizontal">
+                
+                <af:outputLabel value="Company Information" id="ol2" inlineStyle="color: Blue;font-size: 15pt;"
+                                binding="#{backingBeanScope.backing_screen_master_company.ol2}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="10px"/>
+                <af:panelGroupLayout layout="horizontal" id="pgl2">
+                    <af:outputLabel value="Company Name" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_company.ol1}"/>
+                 <af:spacer width="30px"/>  
+                 <af:inputText label="" id="it2" binding="#{backingBeanScope.backing_screen_master_company.it2}"/>
+                    <af:spacer width="20px"/>
+                    <af:outputLabel value="Company Address" id="ol3"
+                                    binding="#{backingBeanScope.backing_screen_master_company.ol3}"/>
+                   <af:spacer width="30px" /> <af:inputText label="" id="it3" rows="5" contentStyle="height: 50px;"
+                                  binding="#{backingBeanScope.backing_screen_master_company.it3}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout id="pgl4" layout="horizontal">
+                    <af:outputLabel value="Company Phone No" id="ol4"
+                                    binding="#{backingBeanScope.backing_screen_master_company.ol4}"/>
+                 <af:spacer width="0px" />   <af:inputText label="" id="it4" binding="#{backingBeanScope.backing_screen_master_company.it4}"/>
+                    <af:spacer width="17px" /><af:outputLabel value="Company E-maill" id="ol5"
+                                    binding="#{backingBeanScope.backing_screen_master_company.ol5}"/>
+                    <af:spacer width="38px" /><af:inputText label="" id="it5" binding="#{backingBeanScope.backing_screen_master_company.it5}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout id="pgl5" layout="horizontal">
+                    <af:outputLabel value="Comapny Website" id="ol6"
+                                    binding="#{backingBeanScope.backing_screen_master_company.ol6}"/>
+                  <af:spacer width="8px" />  <af:inputText label="" id="it6" binding="#{backingBeanScope.backing_screen_master_company.it6}"/>
+                  <af:spacer width="17px" />  <af:outputLabel value="Company Tin NO" id="ol7"
+                                    binding="#{backingBeanScope.backing_screen_master_company.ol7}"/>
+                 <af:spacer width="44px" />   <af:inputText label="" id="it7" binding="#{backingBeanScope.backing_screen_master_company.it7}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout id="pgl6" layout="horizontal">
+                  <af:outputLabel value="Company Cin NO" id="ol8"
+                                    binding="#{backingBeanScope.backing_screen_master_company.ol8}"/>
+                    <af:spacer width="20px"/>
+                    <af:inputText label="" id="it8" binding="#{backingBeanScope.backing_screen_master_company.it8}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:button text="Save" id="b1" action="#{backingBeanScope.backing_screen_master_company.save}"
+                           binding="#{backingBeanScope.backing_screen_master_company.b1}"/>
+            </af:panelGroupLayout>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                      binding="#{backingBeanScope.backing_screen_master_company.p1}">
+                <af:dialog id="d2" type="ok" binding="#{backingBeanScope.backing_screen_master_company.d2}">
+                    <af:outputLabel value="Recoard Added Sucessfully!!" id="ol9"
+                                    binding="#{backingBeanScope.backing_screen_master_company.ol9}"/>
+                    <f:facet name="buttonBar"/>
+                </af:dialog>
+            </af:popup>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_company-->
+</f:view>

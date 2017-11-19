@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="home.jsf" id="d1" binding="#{backingBeanScope.backing_home.d1}">
+        <af:resource type="css" source="/skins/mycore/style.css"/>
+        <af:form id="f1" binding="#{backingBeanScope.backing_home.f1}">
+            <div id="wrapper">
+                <div class="header"></div>
+                <div class="content">
+                    <div class="menud">
+                        <af:panelAccordion id="pa1" binding="#{backingBeanScope.backing_home.pa1}">
+                            <af:showDetailItem text="Master" id="sdi1" binding="#{backingBeanScope.backing_home.sdi1}">
+                                <af:link text="Customer" id="l1" binding="#{backingBeanScope.backing_home.l1}" action="#{backingBeanScope.backing_home.cust}"/>
+                                <af:link text="Supplier" id="l2" binding="#{backingBeanScope.backing_home.l2}" action="#{backingBeanScope.backing_home.supp}"/>
+                                <af:link text="Product" id="l3" binding="#{backingBeanScope.backing_home.l3}" action="#{backingBeanScope.backing_home.product}"/>
+                                <af:link text="Product Category" id="l4" binding="#{backingBeanScope.backing_home.l4}" action="#{backingBeanScope.backing_home.proc}" />
+                                <af:link text="Gl account" id="l5" binding="#{backingBeanScope.backing_home.l5}" visible="false"/>
+                                <af:link text="Tax master" id="l6" binding="#{backingBeanScope.backing_home.l6}" visible="false"/>
+                                <af:showDetail disclosed="true" id="sd1"
+                                               binding="#{backingBeanScope.backing_home.sd1}"/>
+                            </af:showDetailItem>
+                            <af:showDetailItem text="Transcation" id="sdi2">
+                                <af:link text="sales invoice" id="l7" binding="#{backingBeanScope.backing_home.l7}"/>
+                                <af:link text="Purchase" id="l8" binding="#{backingBeanScope.backing_home.l8}"/>
+                                <af:link text="jounral entries" id="l9" binding="#{backingBeanScope.backing_home.l9}"/>
+                            </af:showDetailItem>
+                            <af:showDetailItem text="Reports">
+                                <af:link text="trail balance" id="l10" binding="#{backingBeanScope.backing_home.l10}"/>
+                                <af:link text="profit loss account" id="l11" binding="#{backingBeanScope.backing_home.l11}"/>
+                                <af:link text="balance sheet" id="l12" binding="#{backingBeanScope.backing_home.l12}"/>
+                                <af:link text="general ladges" id="l13" binding="#{backingBeanScope.backing_home.l13}"/>
+                            </af:showDetailItem>
+                        </af:panelAccordion>
+                    </div>
+                    <div class="iframed">
+                        <af:inlineFrame id="if1" binding="#{backingBeanScope.backing_home.if1}" inlineStyle="width: 1200px; height: 500px;"/>
+                    </div>
+                </div>
+                <div class="footer"></div>
+            </div>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_home-->
+</f:view>

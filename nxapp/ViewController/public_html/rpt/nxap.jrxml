@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="nxap" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7133306d-29b7-40d3-930e-e784f59265d3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="78"/>
+	<parameter name="iid" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from compdata , invoice where invoiceid=$P{iid}]]>
+	</queryString>
+	<field name="idcompdata" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="compname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="compadd" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="compphno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="compemail" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="compwebsite" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="invoiceid" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cust_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="billadd" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="shippingadd" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="phone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="term" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="paymethod" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="icode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="iname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qty" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="unit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="price" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tax" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="amount_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{amount}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="171" splitType="Stretch">
+			<textField>
+				<reportElement x="24" y="3" width="161" height="26" uuid="7c1b826a-59c3-4ac9-95b2-71c06f0d2661"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{compname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="29" width="161" height="15" uuid="7ceed49c-7276-48fc-a6a8-c533891d7366"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{compadd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="44" width="74" height="15" uuid="00fe72de-6a27-4d21-8a6d-1137289e39f8"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{compphno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="59" width="161" height="15" uuid="1bc2620e-f090-4a9f-9eb3-796643a87c6f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{compemail}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="98" y="44" width="87" height="15" uuid="eab8cf7f-da94-44fd-a47c-8681eeb0614e"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{compwebsite}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="85" y="74" width="100" height="20" uuid="89b810fd-7120-4cda-a341-35e122b99f8e"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="85" y="93" width="100" height="20" uuid="f1f1dc0b-74da-419d-9610-3615d4a35d94"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cin}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="24" y="74" width="61" height="20" uuid="79f65d43-b42a-4d70-ac07-121739510d6b"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Tin NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="94" width="61" height="20" uuid="9a80e2dd-41bd-48c8-a7c8-2129d0487303"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Cin NO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="316" y="29" width="154" height="15" uuid="de34afe7-aa45-4ec1-ac1e-4f1238f7c66c"/>
+				<textFieldExpression><![CDATA[$F{cust_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="316" y="0" width="154" height="29" uuid="c9a75005-8d45-411b-af6b-6efd390a80de"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice To]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="316" y="44" width="154" height="15" uuid="d05ad055-2a4a-4fac-9e6e-a1786e23918a"/>
+				<textFieldExpression><![CDATA[$F{billadd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="59" width="154" height="15" uuid="4e1b01b3-2f31-43c1-8a35-3070847071a9"/>
+				<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="74" width="154" height="19" uuid="b2fb87f8-cf96-4bc7-8a52-7e04b1ded4cd"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="399" y="114" width="73" height="20" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="7e01fe22-d1ee-4e56-939c-a12dcfe5aab4"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Term]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="472" y="114" width="81" height="20" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="254524b5-4965-4f9e-b5fe-06cfafcca25f"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{term}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="399" y="134" width="73" height="20" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="8ae34334-182a-4059-8df6-c168941d08eb"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="472" y="134" width="81" height="20" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="aeeead45-6800-46d9-88ab-dcd189641a29"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoiceid}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="18" forecolor="#00CCCC" backcolor="#00CCCC" uuid="ebfa5c25-de73-4473-a209-938a8a0842e8"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="42" height="18" forecolor="#FFFFFF" uuid="48777595-d917-4ba5-877c-7160a5347902"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="0" width="119" height="18" forecolor="#FFFFFF" uuid="3d510407-1d14-407b-aa11-6e651adca19b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product / Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="0" width="57" height="18" forecolor="#FFFFFF" uuid="a98681bd-d320-4bf8-a3df-933e0bac5cba"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="1" width="109" height="18" forecolor="#FFFFFF" uuid="dd3badb8-6e92-404f-b6a3-314a139a7229"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="0" width="100" height="18" forecolor="#FFFFFF" uuid="939fc0ac-bcb1-4870-87cc-619f63b9df30"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="44" height="20" uuid="17fac622-b0df-4d05-80cd-302251dd5697"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="44" y="0" width="160" height="20" uuid="0ac1ad56-10a9-45d5-a637-f76fc7f09e5c"/>
+				<textFieldExpression><![CDATA[$F{iname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="204" y="0" width="76" height="20" uuid="57df6da5-5c90-4231-b828-498487e70c66"/>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="280" y="0" width="110" height="20" uuid="f554d5d9-a9a2-4145-9174-453d7be34208"/>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="389" y="0" width="166" height="20" uuid="3673a83e-406e-42f4-80f6-a89996791dd5"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="9a63eb0c-c86c-4291-8139-222a2e0f1663"/>
+			</line>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField pattern="¤ #,##0.00">
+				<reportElement mode="Opaque" x="399" y="15" width="144" height="26" forecolor="#000000" backcolor="#FFFFFF" uuid="efdbe2c2-e9d6-4e42-8042-1f1dc1bbaefe"/>
+				<textFieldExpression><![CDATA[$V{amount_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="15" width="109" height="18" forecolor="#FFFFFF" backcolor="#00CCCC" uuid="74a73c63-d32b-441e-940f-488a80dd863f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grand Total]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

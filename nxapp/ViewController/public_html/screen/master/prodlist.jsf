@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        beforePhase="#{backingBeanScope.backing_screen_master_prodlist.bphase}">
+    <af:document title="prodlist.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_prodlist.d1}">
+        <af:resource type="css">
+            .tb1 {
+                width: 12%;
+                padding: 2px;
+            }
+        </af:resource>
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_prodlist.f1}">
+            <af:panelGroupLayout id="pgl1" layout="vertical" styleClass="AFStretchWidth"
+                                 inlineStyle="margin-left: 10px;"
+                                 binding="#{backingBeanScope.backing_screen_master_prodlist.pgl1}">
+                <af:spacer height="20px"/>
+                <af:outputLabel value="Product List" id="ol3"
+                                inlineStyle="color: #000052;margin-bottom: 10px;font-family: 'Arial Black';font-size: 21pt"
+                                binding="#{backingBeanScope.backing_screen_master_prodlist.ol3}"/>
+                <af:spacer height="20px"/>
+                <af:panelGroupLayout id="pgl2" layout="horizontal" styleClass="AFStretchWidth"
+                                     inlineStyle="margin-left: 10px;"
+                                     binding="#{backingBeanScope.backing_screen_master_prodlist.pgl2}">
+                    <af:outputLabel value="Choice" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_prodlist.ol1}"/>
+                    <af:selectOneChoice autoSubmit="true"
+                                        valueChangeListener="#{backingBeanScope.backing_screen_master_prodlist.choicechange}"
+                                        id="soc1" binding="#{backingBeanScope.backing_screen_master_prodlist.soc1}">
+                        <af:selectItem label="By Name" value="By Name" id="si1"
+                                       binding="#{backingBeanScope.backing_screen_master_prodlist.si1}"/>
+                        <af:selectItem label="By Id" value="By Id" id="si2"
+                                       binding="#{backingBeanScope.backing_screen_master_prodlist.si2}"/>
+                        <af:selectItem label="By All" value="By All" id="si3"
+                                       binding="#{backingBeanScope.backing_screen_master_prodlist.si3}"/>
+                        <af:selectItem label="By Price" value="By Price" id="si4"
+                                       binding="#{backingBeanScope.backing_screen_master_prodlist.si4}"/>
+                    </af:selectOneChoice>
+                    <af:outputLabel value="Filter" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_prodlist.ol2}"/>
+                    <af:inputText label="" id="it1" autoSubmit="true"
+                                  valueChangeListener="#{backingBeanScope.backing_screen_master_prodlist.valchange}"
+                                  binding="#{backingBeanScope.backing_screen_master_prodlist.it1}"/>
+                    <af:button text="Add New Product"
+                               inlineStyle="width:140px;height: 30px;margin-right:100px;font-size: 10pt;padding-left: 17px; "
+                               action="#{backingBeanScope.backing_screen_master_prodlist.newprod}" id="b1"
+                               binding="#{backingBeanScope.backing_screen_master_prodlist.b1}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="20px"/>
+                <af:table var="row" rowBandingInterval="0" id="t1" rowSelection="single" inlineStyle="width:636px"
+                          selectionListener="#{backingBeanScope.backing_screen_master_prodlist.selectionlist}"
+                          value="#{backingBeanScope.backing_screen_master_prodlist.adfTable}"
+                          binding="#{backingBeanScope.backing_screen_master_prodlist.t1}">
+                    <af:column sortable="false" headerText="Product Id" id="c1">
+                        <af:outputText value="#{row.iunit}" id="ot1"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Product Name" id="c2">
+                        <af:outputText value="#{row.iname}" id="ot2"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Price" id="c3">
+                        <af:outputText value="#{row.iprice}" id="ot3"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Unit" id="c4">
+                        <af:outputText value="#{row.iqty}" id="ot4"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Category" id="c5">
+                        <af:outputText value="#{row.itax}" id="ot5"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Edit" id="c6">
+                        <af:button text="" id="b2" action="#{backingBeanScope.backing_screen_master_prodlist.edit}"
+                                   partialSubmit="true"
+                                   inlineStyle=" background-color: transparent ; border: transparent 0cm ;"
+                                   icon="/icon/Pencil-icon.png"/>
+                    </af:column>
+                </af:table>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_prodlist-->
+</f:view>

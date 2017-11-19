@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" beforePhase="#{backingBeanScope.backing_screen_master_catelist.bphase}">
+    <af:document title="catelist.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_catelist.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_catelist.f1}">
+        <af:spacer height="20px" /> 
+        <af:panelGroupLayout id="pgl1" layout="vertical" styleClass="AFStretchWidth"
+                                 inlineStyle="margin-left: 30px;"
+                                 binding="#{backingBeanScope.backing_screen_master_catelist.pgl1}">
+                <af:outputLabel value="Category List" id="ol3" inlineStyle="color: #000052;margin-bottom: 10px;font-family: 'Arial Black';font-size: 25pt"
+                                binding="#{backingBeanScope.backing_screen_master_catelist.ol3}"/>
+                       <af:spacer height="20px" />         
+                <af:panelGroupLayout id="pgl2" layout="horizontal" styleClass="AFStretchWidth"
+                                     inlineStyle="margin-left: 10px;"
+                                     binding="#{backingBeanScope.backing_screen_master_catelist.pgl2}">
+                    <af:outputLabel value="Choice" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_catelist.ol1}"/>
+                    <af:selectOneChoice autoSubmit="true"
+                                        valueChangeListener="#{backingBeanScope.backing_screen_master_catelist.choicechange}"
+                                        id="soc1" binding="#{backingBeanScope.backing_screen_master_catelist.soc1}">
+                        <af:selectItem label="By Name" value="By Name" id="si1"
+                                       binding="#{backingBeanScope.backing_screen_master_catelist.si1}"/>
+                        <af:selectItem label="By Id" value="By Id" id="si2"
+                                       binding="#{backingBeanScope.backing_screen_master_catelist.si2}"/>
+                        <af:selectItem label="By All" value="By All" id="si3"
+                                       binding="#{backingBeanScope.backing_screen_master_catelist.si3}"/>
+                     <!--   <af:selectItem label="By Price" value="By Price" id="si4"
+                                       binding="#{backingBeanScope.backing_screen_master_catelist.si4}"/>
+                -->    </af:selectOneChoice>
+                    <af:outputLabel value="Filter" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_catelist.ol2}"/>
+                    <af:inputText label="" id="it1" autoSubmit="true"
+                                  valueChangeListener="#{backingBeanScope.backing_screen_master_catelist.valchange}"
+                                  binding="#{backingBeanScope.backing_screen_master_catelist.it1}"/>
+                    <af:button text="Add Category" inlineStyle="width:140px;height: 30px;margin-right:100px;font-size: 10pt;padding-left: 17px;" action="#{backingBeanScope.backing_screen_master_catelist.newcate}" id="b1" binding="#{backingBeanScope.backing_screen_master_catelist.b1}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="20px"/>
+                <af:table var="row" rowBandingInterval="0" id="t1" rowSelection="single" inlineStyle="width: 320px;"
+                          selectionListener="#{backingBeanScope.backing_screen_master_catelist.selectionlist}"
+                          value="#{backingBeanScope.backing_screen_master_catelist.adfTable}"
+                          binding="#{backingBeanScope.backing_screen_master_catelist.t1}">
+                    <af:column sortable="false" headerText="Category Id" id="c1">
+                        <af:outputText value="#{row.iunit}" id="ot1"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Category Name" id="c2">
+                        <af:outputText value="#{row.iname}" id="ot2"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Edit" id="c6">
+                        <af:button text="" id="b2" action="#{backingBeanScope.backing_screen_master_catelist.edit}" partialSubmit="true" inlineStyle=" background-color: transparent ; border: transparent 0cm ;" icon="/icon/Pencil-icon.png" />
+                    </af:column>
+                </af:table>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_catelist-->
+</f:view>

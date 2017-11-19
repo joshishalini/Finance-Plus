@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="bsheet.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_bsheet.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_bsheet.f1}">
+        <af:panelGroupLayout layout="vertical">
+        <af:panelGroupLayout layout="horizontal">
+                    <af:outputLabel value="Balance Sheet" id="ol3" inlineStyle="font-size: 14pt;"
+                                    binding="#{backingBeanScope.backing_screen_master_bsheet.ol3}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px" />
+        <af:panelGroupLayout layout="horizontal">
+                   <af:spacer width="5px" /> <af:outputLabel value="Date From" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_bsheet.ol1}"/>
+                   <af:spacer width="15px" /> <af:inputDate label="" id="id1"
+                                  binding="#{backingBeanScope.backing_screen_master_bsheet.id1}"/>
+               <af:spacer width="15px" />
+                    <af:outputLabel value="Date To" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_bsheet.ol2}"/>
+                  <af:spacer width="15px" />  <af:inputDate label="" id="id2"
+                                  binding="#{backingBeanScope.backing_screen_master_bsheet.id2}"/>
+              <af:spacer width="15px" />       <h:commandButton value="Go" id="cb1" style="color: White;background: #006394 ;font-weight: bold;border-radius: 0;width:90px;"
+                               action="#{backingBeanScope.backing_screen_master_bsheet.report}"      binding="#{backingBeanScope.backing_screen_master_bsheet.cb1}"/>
+                </af:panelGroupLayout>
+        </af:panelGroupLayout>
+        <af:popup id="p1" childCreation="deferred" autoCancel="disabled" binding="#{backingBeanScope.backing_screen_master_bsheet.p1}" >
+         <af:panelWindow id="pw1" binding="#{backingBeanScope.backing_screen_master_bsheet.pw1}" inlineStyle="width:800px;height:600px" title="Invoice">
+                    <af:inlineFrame id="if1" binding="#{backingBeanScope.backing_screen_master_bsheet.if1}" source="/bsheetrpt" inlineStyle="width:780px;height: 550px;"/>
+                </af:panelWindow>
+        </af:popup>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_bsheet-->
+</f:view>

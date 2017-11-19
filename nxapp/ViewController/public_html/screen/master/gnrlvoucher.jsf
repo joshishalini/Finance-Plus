@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        beforePhase="#{backingBeanScope.backing_screen_master_gnrlvoucher.bphase}">
+    <af:document title="gnrlvoucher.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.d1}">
+        <af:resource type="css">
+            .tb1 {
+                width: 12%;
+                padding: 2px;
+            }
+        </af:resource>
+        <af:resource type="javascript">
+          function handleEnterEvent(evt) {
+              var _keyCode = evt.getKeyCode();
+              //check for Enter Key
+              if (_keyCode == AdfKeyStroke.ENTER_KEY) {
+                  var comp = evt.getSource();
+                  AdfCustomEvent.queue(comp, "EnterEvent", 
+                  {
+                      fvalue : comp.getSubmittedValue()
+                  },
+false);
+              }
+          }
+          evt.cancel();
+        </af:resource>
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.f1}">
+            <af:panelGroupLayout layout="vertical" inlineStyle="margin-left: 10px;margin-top: 10px;">
+                <af:panelGroupLayout layout="horizontal">
+                    <af:outputLabel value="General Voucher" inlineStyle="font-size: 15pt;" id="ol17"
+                                    binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.ol17}"/>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout layout="horizontal">
+                    <af:outputLabel value="Account No" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.ol1}"/>
+                    <af:spacer width="40px"/>
+                    <af:inputText label="" id="it1" binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.it1}">
+                        <af:clientListener type="keyPress" method="handleEnterEvent"/>
+                        <af:serverListener type="EnterEvent"
+                                           method="#{backingBeanScope.backing_screen_master_gnrlvoucher.getDetails}"/>
+                    </af:inputText>
+                    <af:spacer width="40px"/>
+                    <af:outputLabel value="Account Name" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.ol2}"/>
+                    <af:spacer width="40px"/>
+                    <af:inputText label="" id="it2"
+                                  binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.it2}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout layout="horizontal">
+                    <af:outputLabel value="Ledger Detail" id="ol3"
+                                    binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.ol3}"/>
+                  <af:spacer width="28px" />  <af:inputText label="" id="it3"
+                                  binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.it3}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout layout="horizontal">
+                    <af:outputLabel value="Date" id="ol4"
+                                    binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.ol4}"/>
+                    <af:spacer width="95px"/>
+                    <af:inputDate label="" id="id1"
+                                  binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.id1}"/>
+                   <af:spacer width="32px" />   <af:outputLabel value="Description" id="ol5"
+                                    binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.ol5}"/>
+                    <af:spacer width="55px" />  <af:inputText label="" id="it4"
+                                  binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.it4}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout layout="horizontal">
+                    <af:outputLabel value="Amount" id="ol6"
+                                    binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.ol6}"/>
+                    <af:spacer width="72px"/>
+                    <af:inputText label="" id="it5"
+                                  binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.it5}"/>
+                    <af:selectOneRadio label="" id="sor1" labelStyle="font-size:11pt;" contentStyle="font-size:11pt;"
+                                       binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.sor1}"
+                                       autoSubmit="true">
+                        <af:selectItem label="Credit" id="si1"
+                                       binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.si1}"/>
+                        <af:selectItem label="Debit" id="si2"
+                                       binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.si2}"/>
+                    </af:selectOneRadio>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout layout="horizontal">
+                    <af:button text="Save" id="b1"
+                               inlineStyle="font-family:Verdana; font-size:10.0pt; font-effect:emboss; font-smooth:always; font-style:normal;text-align:center;vertical-align:middle;padding:5px 10px;text-transform: uppercase;"
+                               binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.b1}"
+                               action="#{backingBeanScope.backing_screen_master_gnrlvoucher.save}"/>
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                      binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.p1}">
+                <af:dialog id="d2" binding="#{backingBeanScope.backing_screen_master_gnrlvoucher.d2}" type="ok">
+                    <f:facet name="buttonBar"/>
+                    <af:outputLabel value="Record Added!!"/>
+                </af:dialog>
+            </af:popup>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_gnrlvoucher-->
+</f:view>

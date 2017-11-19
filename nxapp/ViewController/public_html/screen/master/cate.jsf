@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        beforePhase="#{backingBeanScope.backing_screen_master_cate.bphase}">
+    <af:document title="cate.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_cate.d1}">
+        <af:resource type="css">
+            .td1 {
+                width: 12%;
+                padding: 2px;
+            }
+        </af:resource>
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_cate.f1}">
+            <table>
+                <tr>
+                    <td class="td1">
+                        <af:outputLabel value="Category" id="ol1"
+                                         inlineStyle="color: #000052;margin-bottom: 10px;font-family: 'Arial Black';font-size: 25pt"
+                                        binding="#{backingBeanScope.backing_screen_master_cate.ol1}"/>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="td1">
+                        <af:outputLabel value="Id" id="ol2"
+                                        binding="#{backingBeanScope.backing_screen_master_cate.ol2}"/>
+                    </td>
+                    <td class="td1">
+                        <af:inputText label="" id="it1" binding="#{backingBeanScope.backing_screen_master_cate.it1}"/>
+                    </td>
+                    <td class="td1">
+                        <af:outputLabel value="Name" id="ol3"
+                                        binding="#{backingBeanScope.backing_screen_master_cate.ol3}"/>
+                    </td>
+                    <td class="td1">
+                          
+                        <af:inputText label="" id="it2" binding="#{backingBeanScope.backing_screen_master_cate.it2}"/>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="td1">
+                        <af:button text="Save" id="b1" binding="#{backingBeanScope.backing_screen_master_cate.b1}"
+                                   inlineStyle="font-family:Verdana; font-size:10.0pt; font-effect:emboss; font-smooth:always; font-style:normal;text-align:center;vertical-align:middle;padding:5px 10px;padding-bottom: 6pt; text-transform: uppercase; "
+                                   action="#{backingBeanScope.backing_screen_master_cate.save}"/>
+                    </td>
+                </tr>
+            </table>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                      binding="#{backingBeanScope.backing_screen_master_cate.p1}">
+                <af:dialog id="d2" type="ok" binding="#{backingBeanScope.backing_screen_master_cate.d2}">
+                    <f:facet name="buttonBar"/>
+                    <af:outputLabel value="Recoard Added Sucesfully!!!" id="ol4"
+                                    binding="#{backingBeanScope.backing_screen_master_cate.ol4}"/>
+                </af:dialog>
+            </af:popup>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_cate-->
+</f:view>

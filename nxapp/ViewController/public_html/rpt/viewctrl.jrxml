@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="viewctrl" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9e34f242-1812-4f35-a721-fccdd8c7e895">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select DISTINCT  * from student_table where idstudent_table = $P{id}]]>
+	</queryString>
+	<field name="idstudent_table" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="blood" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="add" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="city" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="state" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="country" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="phno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="degree" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="board" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="collage" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="percent" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="year" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="back" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="project" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="institute" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="des" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="expert" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="skill" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="extra" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="64" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="100" height="20" uuid="35e0953d-08e5-4e5d-8e46-88a7ee368cf2"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="20" width="100" height="20" uuid="59b8cf95-d488-4a3e-828f-42b0cbb01ff4"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="40" width="100" height="20" uuid="a64b1792-af97-4fbc-9eb2-9dc16f75481f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="222" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="139" width="100" height="20" uuid="1f032336-fb78-4a0d-8b94-765f927fc14a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Father's Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="139" width="100" height="20" uuid="5655cf67-0962-4546-a139-58c55cc427d4"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="159" width="100" height="20" uuid="fb21b0d5-eb13-4d25-81a7-f90ccb4a71cf"/>
+				<textFieldExpression><![CDATA[$F{mname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="159" width="100" height="20" uuid="84478745-660c-44ce-bfa2-2a192f837552"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mother's Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="179" width="53" height="20" uuid="b7420225-d649-4273-82e0-7ec85dbc7ba6"/>
+				<textFieldExpression><![CDATA[$F{add}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="179" width="47" height="20" uuid="784e0dde-dafe-4427-bc7e-da472e391132"/>
+				<textFieldExpression><![CDATA[$F{city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="199" width="53" height="20" uuid="c6c1efd8-2e0f-440c-9903-b76f5c38b87c"/>
+				<textFieldExpression><![CDATA[$F{state}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="179" width="100" height="20" uuid="14e4762f-a8f5-435e-861a-74fd41627834"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="173" y="199" width="47" height="20" uuid="a7f09ff9-eaae-4adc-9822-b6e064065d8f"/>
+				<textFieldExpression><![CDATA[$F{country}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="380" y="139" width="100" height="20" uuid="2eeaa17e-5ca1-4ad3-8105-9688642b56ac"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dob}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="139" width="100" height="20" uuid="5c2439d1-0242-4ccf-bf04-da952ab8be1b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of birth]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="119" width="100" height="20" uuid="3f215baf-024b-4e2c-b459-dccb708bcfd0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Personal Detail :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="179" width="100" height="20" uuid="4b7f1ac2-b0cb-4bb3-bbc9-d591be077379"/>
+				<textFieldExpression><![CDATA[$F{cat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="159" width="100" height="20" uuid="0f1bcec6-751d-4f35-8221-2933846a24d3"/>
+				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="199" width="100" height="20" uuid="472ea8c2-f153-4760-b39c-6b77f10e86df"/>
+				<textFieldExpression><![CDATA[$F{blood}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="179" width="100" height="20" uuid="139a3b7c-85db-4468-ae9b-e88b9d1091b8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="159" width="100" height="20" uuid="0ec7f2c8-e295-4bff-bbd5-2d7cbb084f76"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="199" width="100" height="20" uuid="7de43ddd-5311-40a4-b16d-29b838a95fab"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Blood group]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="0" width="100" height="20" uuid="77299780-6029-47b3-bf6c-e908a81c0f4a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Accedmic Detail:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="20" width="100" height="20" uuid="76df0c6b-9521-4b0f-926d-7e46c4fe7a65"/>
+				<text><![CDATA[Degree/ Examination]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="20" width="100" height="20" uuid="2c30993d-2c63-4207-9aa1-dffd0c6bbf6d"/>
+				<textFieldExpression><![CDATA[$F{degree}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="40" width="100" height="20" uuid="a55d80f2-0317-47cb-a299-2c0aa637c28f"/>
+				<text><![CDATA[board]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="40" width="100" height="20" uuid="b4ec729b-06c6-41c5-a0f7-3ce1c3bdbbb7"/>
+				<textFieldExpression><![CDATA[$F{board}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="60" width="100" height="20" uuid="af4b9ec5-d620-4c5d-95f9-e5c10a694617"/>
+				<text><![CDATA[collage]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="60" width="100" height="20" uuid="3abf8777-036d-41a1-8927-30bcdee566b2"/>
+				<textFieldExpression><![CDATA[$F{collage}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="80" width="100" height="20" uuid="d8d5969f-9ac7-41cb-bd71-23a8de2c965e"/>
+				<text><![CDATA[percent]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="80" width="100" height="20" uuid="5f07fa24-f40f-44dc-b104-b0a411bbb3a2"/>
+				<textFieldExpression><![CDATA[$F{percent}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="309" y="20" width="100" height="20" uuid="479155d1-6381-4c87-aa69-ae1f9f092ed0"/>
+				<text><![CDATA[year]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="409" y="20" width="100" height="20" uuid="35813ae9-4b92-4436-9281-d9a74ade4027"/>
+				<textFieldExpression><![CDATA[$F{year}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="309" y="40" width="100" height="20" uuid="21fa0476-b0b2-4b50-a365-f21766661d23"/>
+				<text><![CDATA[back]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="409" y="40" width="100" height="20" uuid="8a1ca467-b4d5-443d-b1c1-10ee26059eac"/>
+				<textFieldExpression><![CDATA[$F{back}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

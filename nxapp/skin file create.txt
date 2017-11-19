@@ -1,0 +1,6 @@
+File-> new -> Application->adf web application fusion ->next next next.....
+To add skin File:-
+right-click on web inf -> search skin and add it mycore name then add copy and paste to trindad configure.
+add dbcon:-
+apllication source -> view.baking -> add java class add dbcon
+and paste the code to dbcon from nxapp

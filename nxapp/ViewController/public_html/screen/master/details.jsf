@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        beforePhase="#{backingBeanScope.backing_screen_master_details.bphase}">
+    <af:document title="details.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_details.d1}">
+        <af:resource type="css">
+            .tb1 {
+                width: 12%;
+                padding: 2px;
+            }
+            .divi{
+            height:300px;
+             width: 100%;
+             margin:5px;
+             top:1%;
+             left:10%;
+              position: absolute;
+            }
+            .custdetail {
+                height: 100px;
+                margin: 5px;
+                width: 75%;
+                top: 10%;
+                left: 10%;
+                background-color: #e7e7e7;
+                border: #b5b5b5 solid;
+                position: absolute;
+            }
+        </af:resource>
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_details.f1}">
+            <div class="custdetail">
+                <af:panelGroupLayout id="pgl1" layout="vertical">
+                    <af:spacer height="5px" id="s1"/>
+                    <af:panelGroupLayout id="pgl2" layout="horizontal">
+                        <af:outputLabel value="Customer ID" id="ol1"
+                                        binding="#{backingBeanScope.backing_screen_master_details.ol1}"/>
+                        <af:spacer width="50px"/>
+                        <af:outputLabel value="" id="ol5"
+                                        binding="#{backingBeanScope.backing_screen_master_details.ol5}"/>
+                    </af:panelGroupLayout>
+                    <af:spacer height="5px" id="s2"/>
+                    <af:panelGroupLayout id="pgl3" layout="horizontal">
+                        <af:outputLabel value="Customer name" id="ol3"
+                                        binding="#{backingBeanScope.backing_screen_master_details.ol3}"/>
+                        <af:spacer width="29px"/>
+                        <af:outputLabel value="" id="ol6"
+                                        binding="#{backingBeanScope.backing_screen_master_details.ol6}"/>
+                    </af:panelGroupLayout>
+                    <af:spacer height="5px"/>
+                    <af:panelGroupLayout id="pgl4" layout="horizontal">
+                        <af:outputLabel value="Address" id="ol4"
+                                        binding="#{backingBeanScope.backing_screen_master_details.ol4}"/>
+                        <af:spacer width="82px"/>
+                        <af:outputLabel value="" id="ol7"
+                                        binding="#{backingBeanScope.backing_screen_master_details.ol7}"/>
+                    </af:panelGroupLayout>
+                </af:panelGroupLayout>
+            </div>
+            <div class="divi">
+            <af:panelGroupLayout id="pgl5" layout="vertical">
+                <af:spacer height="250px"/>
+                <af:panelGroupLayout id="pgl6" layout="horizontal">
+                    <af:panelTabbed id="pt1" inlineStyle=" height: auto;width: 75%;"
+                                    binding="#{backingBeanScope.backing_screen_master_details.pt1}">
+                        <af:showDetailItem text="Invoice" id="sdi1"
+                                            binding="#{backingBeanScope.backing_screen_master_details.sdi1}">
+                            <af:table var="row" rowBandingInterval="0" id="t1"
+                                      inlineStyle=" height:auto; width: auto; margin: 10px;"
+                                      value="#{backingBeanScope.backing_screen_master_details.invoice_table}"
+                                      binding="#{backingBeanScope.backing_screen_master_details.t1}">
+                                <af:column sortable="false" headerText="S No" id="c1">
+                                    <af:outputText value="#{row.icode}" id="ot1"/>
+                                </af:column>
+                                <af:column sortable="false" headerText="Invoice No" id="c2">
+                                    <af:outputText value="#{row.iunit}" id="ot2"/>
+                                </af:column>
+                                <af:column sortable="false" headerText="Amount" id="c3">
+                                    <af:outputText value="#{row.iamount}" id="ot3"/>
+                                </af:column>
+                                <af:column sortable="false" headerText="Due Amount" id="c4">
+                                    <af:outputText value="#{row.iname}" id="ot4"/>
+                                </af:column>
+                            </af:table>
+                        </af:showDetailItem>
+                        <af:showDetailItem text="Transiction" id="sdi2"
+                                           binding="#{backingBeanScope.backing_screen_master_details.sdi2}">
+                            <af:table var="row" value="#{backingBeanScope.backing_screen_master_details.transaction_table}"   inlineStyle=" height:auto; width: auto ; margin: 10px;" rowBandingInterval="0" id="t2"
+                                      binding="#{backingBeanScope.backing_screen_master_details.t2}">
+                                <af:column sortable="false" headerText="S NO." id="c5">
+                                    <af:outputText value="#{row.idr}" id="ot5"/>
+                                </af:column>
+                                <af:column sortable="false" headerText="Perticulers" id="c6">
+                                    <af:outputText value="#{row.iprice}" id="ot6"/>
+                                </af:column>
+                                <af:column sortable="false" headerText="Debit" id="c7">
+                                    <af:outputText value="#{row.itotal}" id="ot7"/>
+                                </af:column>
+                                <af:column sortable="false" headerText="Cerdit" id="c8">
+                                    <af:outputText value="#{row.itax}" id="ot8"/>
+                                </af:column>
+                                <af:column sortable="false" headerText="Balance" id="c9">
+                                    <af:outputText value="#{row.iqty}" id="ot9"/>
+                                </af:column>
+                            </af:table>
+                        </af:showDetailItem>
+                    </af:panelTabbed>
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+            </div>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_details-->
+</f:view>

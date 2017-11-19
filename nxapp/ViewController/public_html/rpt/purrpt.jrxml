@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="salesrpt" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="57abcab0-5653-4e5f-814e-d0a77397e494">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="d1" class="java.util.Date"/>
+	<parameter name="d2" class="java.util.Date"/>
+	<parameter name="p1" class="java.lang.String"/>
+	<parameter name="or" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     sum(dr),
+     vocher.`cname`,
+     vocher.`id`,
+     vocher.`date`
+FROM
+     `nxapp`.`vocher` vocher
+WHERE
+     accno = 1501
+     and date BETWEEN $P{d1} and $P{d2}
+GROUP BY
+     id
+ORDER BY
+$P{or}]]>
+	</queryString>
+	<field name="sum(dr)" class="java.math.BigDecimal"/>
+	<field name="cname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="sum(cr)_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{sum(dr)}]]></variableExpression>
+	</variable>
+	<variable name="sum(dr)_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{sum(dr)}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="75" y="4" width="405" height="20" uuid="2eb8b5f2-505f-4ec5-9452-587a29e54c2f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="109" y="28" width="121" height="20" uuid="f2f77961-9040-447d-b8c1-0c16c454f5ce"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PURCHASE REPORT]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="51" width="554" height="1" uuid="57e86dc2-6c4f-4c1c-92e0-9c92907d4569"/>
+			</line>
+			<staticText>
+				<reportElement x="231" y="28" width="100" height="20" uuid="2f86a060-f4a3-4fc8-9f5d-ccfb86c90581"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FOR PERIOD OF:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="331" y="28" width="66" height="20" uuid="a6e9dd7c-7f12-44d3-bb15-56565d0c4168"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{d1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="414" y="28" width="70" height="20" uuid="1689fa57-5e42-49d5-bb04-12f0332ac103"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{d2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="393" y="28" width="20" height="20" uuid="ce329c72-0811-474a-ba3c-1c090eb87d65"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="5" width="58" height="20" uuid="6d1ee2a4-318c-403a-9715-d34130edbdb3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Invoice Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="209" y="5" width="100" height="20" uuid="1471cd7e-f694-4362-bb10-f9282dc4dcaf"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Customer Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="5" width="71" height="20" uuid="21f52dd5-98a8-44a9-bdba-8788b519f007"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="5" width="100" height="20" uuid="652bf295-d0f4-4ed3-bb33-87a6ad88853b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="25" width="555" height="1" uuid="96659fd0-1c53-4bbb-af24-023af8a11e5a"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="9" y="1" width="76" height="20" uuid="31538bc3-df90-414c-868e-9e60cb14c16e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="109" y="1" width="71" height="20" uuid="b1a92ec0-33d4-4821-8711-5d61dd2cde04"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="1" width="163" height="20" uuid="6007cd06-a961-4c3e-aaf1-3b36952c3151"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cname}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="417" y="1" width="100" height="20" uuid="fe5c5516-db79-428f-9bcc-b4ac51c5d815"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sum(dr)}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="21" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="337" y="8" width="80" height="20" uuid="b0ddc86b-94b3-47db-a79b-20f868a8ac0a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Grand Total :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="298" y="6" width="257" height="1" uuid="1aba1f5a-8c44-4d04-9baa-b8e69b420286"/>
+			</line>
+			<line>
+				<reportElement x="298" y="30" width="257" height="1" uuid="1a595df0-dbe8-4e80-9f54-6ccd97905f9b"/>
+			</line>
+			<textField>
+				<reportElement x="417" y="8" width="100" height="20" uuid="e0ba5526-2bcd-4b15-97f6-f28cdfa7716e"/>
+				<textFieldExpression><![CDATA[$V{sum(dr)_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

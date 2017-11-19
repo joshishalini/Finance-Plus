@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tporptnew" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b92a63fb-f7e3-4605-94f2-682b5beb50e6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="PER1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from student WHERE bper >= $P{PER1}]]>
+	</queryString>
+	<field name="idstudent" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="add" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="city" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="state" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="country" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="phno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="10degree" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="10board" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="10coll" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="10per" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="10year" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="10back" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="12degree" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="12board" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="12coll" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="12year" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="12per" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="12back" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bdegree" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bboard" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bcoll" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bper" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="byear" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bback" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tittle" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="insti" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="expert" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="skill" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="extra" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="56" splitType="Stretch">
+			<staticText>
+				<reportElement x="185" y="0" width="417" height="25" uuid="2cd72f71-e613-414e-b381-63c175ac6d76"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ M.L.V. TEXTILE AND ENGINEERING COLLEGE,BHILWARA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="52" height="20" uuid="6345adbf-8ab7-449c-8471-fe4609da7ff9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Branch]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="36" width="100" height="20" uuid="a6335cff-e01c-4117-9e27-cd3681e8f5d5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Informtion tech.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="702" y="35" width="100" height="20" uuid="f94f4fcb-9174-4cb0-bcec-a90939a56db5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2013-2017]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="657" y="35" width="45" height="20" uuid="5c921098-1b25-4c8c-aff0-440184f48d9c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="52" height="38" uuid="28e5fe13-5894-48c3-b59b-dd5c51611c1c"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="802" height="1" uuid="6e38c8d3-bf08-48fe-8c59-51f81d43a97e"/>
+			</line>
+			<staticText>
+				<reportElement x="54" y="2" width="62" height="36" uuid="b7d830c3-012a-43af-804f-3161f0fb3021"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="337" y="3" width="106" height="37" uuid="44cde910-ee1a-4241-8e1b-3479004b265e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[School Name(10)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="4" width="60" height="37" uuid="aab72ca9-8bd2-40b9-8359-80541cd0152a"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Percentage(10)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="39" width="802" height="1" uuid="0fc50081-6155-4b66-b213-ae8b612a2be1"/>
+			</line>
+			<staticText>
+				<reportElement x="116" y="2" width="84" height="36" uuid="69ea587b-ffda-4932-9b3e-1b870aefd2ae"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Phone No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="504" y="3" width="104" height="36" uuid="819bb815-c386-4058-a94c-5016e4ae9b33"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[School Name(12)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="608" y="4" width="66" height="36" uuid="533b7198-84ab-4374-8b3d-0d0683d4f6c6"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Percentage(12)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="739" y="4" width="64" height="36" uuid="812b9746-3341-4f70-9d34-21e765ba651f"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Back Logs (B.TECH.)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="675" y="6" width="64" height="36" uuid="e185b712-92f4-4412-b7f1-44fdf6873c7d"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Percentage(B.TECH)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="1" width="135" height="37" uuid="584116d6-73e9-4441-9c9f-0aa8862ebdb0"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-MAIL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="52" height="30" uuid="a22b8686-6201-434e-b486-51a78fd0e032"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idstudent}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="337" y="2" width="106" height="30" uuid="89122b1a-1abe-4a82-b74b-faaf51c15eeb"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{10coll}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="2" width="60" height="30" uuid="63b760c9-cfb8-4f82-adab-963be23f3856"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{10per}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="0" width="62" height="30" uuid="e04b965e-e425-4a6e-bf94-f503b5f3a4f5"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sname}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="0" width="84" height="30" uuid="70d358bc-f431-4b94-a65d-4ea786e16762"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="504" y="2" width="104" height="30" uuid="e7b71a2a-8440-4084-9e55-4470cf044575"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{12coll}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="608" y="2" width="66" height="30" uuid="f055ef4e-b9f2-4882-b94f-b5097f9836a3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{12per}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="739" y="2" width="64" height="30" uuid="e2e03c3d-b80f-464f-b77f-5b68ef8f3a5a"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bback}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="675" y="2" width="64" height="30" uuid="4b51544a-252b-43fe-8c52-1faca7495787"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bper}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="137" height="35" uuid="2e64aee7-c0af-46f2-8479-39d17ae91a4f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

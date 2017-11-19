@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="tbal.jsf"  id="d1" binding="#{backingBeanScope.backing_screen_master_tbal.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_tbal.f1}">
+        <af:panelGroupLayout layout="vertical">
+        <af:panelGroupLayout layout="horizontal">
+                    <af:outputLabel value="Sales Repoart" id="ol3" inlineStyle="font-size: 14pt;"
+                                    binding="#{backingBeanScope.backing_screen_master_tbal.ol3}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px" />
+        <af:panelGroupLayout layout="horizontal">
+                   <af:spacer width="5px" /> <af:outputLabel value="Date From" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_tbal.ol1}"/>
+                   <af:spacer width="15px" /> <af:inputDate label="" id="id1"
+                                  binding="#{backingBeanScope.backing_screen_master_tbal.id1}"/>
+               <af:spacer width="15px" />
+                    <af:outputLabel value="Date To" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_tbal.ol2}"/>
+                  <af:spacer width="15px" />  <af:inputDate label="" id="id2"
+                                  binding="#{backingBeanScope.backing_screen_master_tbal.id2}"/>
+                 <af:spacer width="15px" />     <h:commandButton value="Go" id="cb1" style="color: White;background: #006394 ;font-weight: bold;border-radius: 0;width:90px;"
+                                     binding="#{backingBeanScope.backing_screen_master_tbal.cb1}" action="#{backingBeanScope.backing_screen_master_tbal.go}" />
+                </af:panelGroupLayout>
+        </af:panelGroupLayout>
+          <af:popup childCreation="deferred" autoCancel="disabled" id="p1"
+                      binding="#{backingBeanScope.backing_screen_master_tbal.p1}">
+                <af:panelWindow id="pw1" binding="#{backingBeanScope.backing_screen_master_tbal.pw1}" inlineStyle="width:800px;height:600px" title="Sales">
+                    <af:inlineFrame id="if1" binding="#{backingBeanScope.backing_screen_master_tbal.if1}" source="/sales" inlineStyle="width:780px;height: 550px;"/>
+                </af:panelWindow>
+            </af:popup>
+         </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_tbal-->
+</f:view>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="gl.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_gl.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_gl.f1}">
+        <af:panelGroupLayout layout="vertical">
+        <af:panelGroupLayout layout="horizontal">
+                    <af:outputLabel value="General Ledged" id="ol3" inlineStyle="font-size: 14pt;"
+                                    binding="#{backingBeanScope.backing_screen_master_gl.ol3}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px" />
+        <af:panelGroupLayout layout="horizontal">
+                   <af:spacer width="5px" /> <af:outputLabel value="Date From" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_gl.ol1}"/>
+                   <af:spacer width="15px" /> <af:inputDate label="" id="id1"
+                                  binding="#{backingBeanScope.backing_screen_master_gl.id1}"/>
+               <af:spacer width="15px" />
+                    <af:outputLabel value="Date To" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_gl.ol2}"/>
+                  <af:spacer width="15px" />  <af:inputDate label="" id="id2"
+                                  binding="#{backingBeanScope.backing_screen_master_gl.id2}"/>
+                    <h:commandButton value="Go" id="cb1" style="color: White;background: #006394 ;font-weight: bold;border-radius: 0;width:90px;"
+                                     binding="#{backingBeanScope.backing_screen_master_gl.cb1}"/>
+                </af:panelGroupLayout>
+        </af:panelGroupLayout>
+        
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_gl-->
+</f:view>

@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        beforePhase="#{backingBeanScope.backing_screen_master_invoicelist.bphase}">
+    <af:document title="invoicelist.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_invoicelist.d1}">
+        <af:resource type="css">
+            .td1 {
+                width: 12%;
+                padding: 2px;
+            }
+        </af:resource>
+        <af:form id="f1" inlineStyle="overflow: hidden ;" binding="#{backingBeanScope.backing_screen_master_invoicelist.f1}">
+             <af:spacer width="5px" /> 
+            <af:panelGroupLayout id="pgl1" layout="vertical" styleClass="AFStretchWidth"
+                                 inlineStyle="margin-left: 10px;"
+                                 binding="#{backingBeanScope.backing_screen_master_invoicelist.pgl1}">
+                <af:panelGroupLayout layout="horizontal" id="pgl2"
+                                     binding="#{backingBeanScope.backing_screen_master_invoicelist.pgl2}">
+                    <af:outputLabel value="Choice" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_invoicelist.ol2}"/>
+                    <af:selectOneChoice id="soc2" autoSubmit="true"
+                                        valueChangeListener="#{backingBeanScope.backing_screen_master_invoicelist.choiceChange}"
+                                        binding="#{backingBeanScope.backing_screen_master_invoicelist.soc2}">
+                        <af:selectItem label="By name" value="By name" id="si4"
+                                       binding="#{backingBeanScope.backing_screen_master_invoicelist.si4}"/>
+                        <af:selectItem label="By id" value="By id" id="si1"
+                                       binding="#{backingBeanScope.backing_screen_master_invoicelist.si1}"/>
+                        <af:selectItem label="By date" value="By date" id="si2"
+                                       binding="#{backingBeanScope.backing_screen_master_invoicelist.si2}"/>
+                        <af:selectItem label="Paid" value="Paid" id="si5"
+                                       binding="#{backingBeanScope.backing_screen_master_invoicelist.si5}"/>
+                        <af:selectItem label="Due" value="Due" id="si6"
+                                       binding="#{backingBeanScope.backing_screen_master_invoicelist.si6}"/>
+                        <af:selectItem label="By All" value="By All" id="si7"
+                                       binding="#{backingBeanScope.backing_screen_master_invoicelist.si7}"/>
+                    </af:selectOneChoice>
+                    <af:spacer width="15px" /> 
+                    <af:outputLabel value="Filter" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_invoicelist.ol1}"/>
+                    <af:inputText label="" id="it2" autoSubmit="true"
+                                  valueChangeListener="#{backingBeanScope.backing_screen_master_invoicelist.ValChange}"
+                                  binding="#{backingBeanScope.backing_screen_master_invoicelist.it2}"/>
+                    <af:chooseDate id="cd1" visible="false"
+                                   binding="#{backingBeanScope.backing_screen_master_invoicelist.cd1}"/>
+                       <af:spacer width="15px" />
+                         <af:button text="Create New Invoice" id="b3"  action="#{backingBeanScope.backing_screen_master_invoicelist.newinvoice}"
+                              inlineStyle="width: auto;"  binding="#{backingBeanScope.backing_screen_master_invoicelist.b3}"/>
+           
+                </af:panelGroupLayout>
+                 <af:spacer width="3px" /> 
+                <af:popup id="pop1">
+                    <af:menu text="menu 1" id="m1" binding="#{backingBeanScope.backing_screen_master_invoicelist.m1}">
+                        <af:commandMenuItem text="" id="cmi1" icon="/icon/Finance-Coins-icon.png"
+                                            action="#{backingBeanScope.backing_screen_master_invoicelist.payment}"
+                                            partialSubmit="true" partialTriggers="t1"
+                                            binding="#{backingBeanScope.backing_screen_master_invoicelist.cmi1}"
+                                            actionListener="#{backingBeanScope.backing_screen_master_invoicelist.Pay}"></af:commandMenuItem>
+                        <af:commandMenuItem text="" icon="/icon/Pencil-icon.png" id="cmi2"
+                                            action="#{backingBeanScope.backing_screen_master_invoicelist.Edit}"
+                                            partialSubmit="true" partialTriggers="t1"
+                                            binding="#{backingBeanScope.backing_screen_master_invoicelist.cmi2}"
+                                            actionListener="#{backingBeanScope.backing_screen_master_invoicelist.Edit}"/>
+                    </af:menu>
+                </af:popup>
+                <af:popup id="pop2" binding="#{backingBeanScope.backing_screen_master_invoicelist.pop2}">
+                    <af:panelWindow id="pw1" title="Payment" inlineStyle="width:400px;height:300px;"
+                                    binding="#{backingBeanScope.backing_screen_master_invoicelist.pw1}">
+                        <f:facet name="buttonBar"/>
+                        <table>
+                            <tr>
+                                <td class="td1">
+                                    <af:outputLabel value="Invoice Id" id="ol3"
+                                                    binding="#{backingBeanScope.backing_screen_master_invoicelist.ol3}"/>
+                                </td>
+                                <td class="td1">
+                                    <af:inputText label="" id="it5"
+                                                  binding="#{backingBeanScope.backing_screen_master_invoicelist.it5}"/>
+                                </td>
+                            </tr>
+                             
+                            <tr>
+                                <td class="td1">
+                                    <af:outputLabel value="Customer Name" id="ol5"
+                                                    binding="#{backingBeanScope.backing_screen_master_invoicelist.ol5}"/>
+                                </td>
+                                <td class="td1">
+                                    <af:inputText label="" id="it4"
+                                                  binding="#{backingBeanScope.backing_screen_master_invoicelist.it4}"/>
+                                </td>
+                            </tr>
+                             <tr>
+                             <td class="td1">
+                             <af:outputLabel value="Date"/>
+                              
+                             </td>
+                             <td class="td1">
+                                    <af:inputDate label="" id="id1"
+                                                  binding="#{backingBeanScope.backing_screen_master_invoicelist.id1}"/>
+                                </td>
+                             </tr>
+                            <tr>
+                                <td class="td1">
+                                    <af:outputLabel value="Due Amount" id="ol7"
+                                                    binding="#{backingBeanScope.backing_screen_master_invoicelist.ol7}"/>
+                                </td>
+                                <td class="td1">
+                                    <af:inputText label="" id="it3"
+                                                  binding="#{backingBeanScope.backing_screen_master_invoicelist.it3}"/>
+                                </td>
+                            </tr>
+                             
+                            <tr>
+                                <td class="td1">
+                                    <af:outputLabel value="Paid Amount" id="ol6" 
+                                                    binding="#{backingBeanScope.backing_screen_master_invoicelist.ol6}"/>
+                                </td>
+                                <td class="td1">
+                                    <af:inputText label="" id="it6" autoSubmit="true" valueChangeListener="#{backingBeanScope.backing_screen_master_invoicelist.paidValChange}"
+                                                  binding="#{backingBeanScope.backing_screen_master_invoicelist.it6}"
+                                                />
+                                </td>
+                            </tr>
+                             
+                            <tr>
+                                <td class="td1">
+                                    <af:outputLabel value="Payment Method" id="ol8"
+                                                    binding="#{backingBeanScope.backing_screen_master_invoicelist.ol8}"/>
+                                </td>
+                                <td class="td1">
+                                    <af:selectOneChoice id="soc3"
+                                                        binding="#{backingBeanScope.backing_screen_master_invoicelist.soc3}">
+                                        <af:selectItem label="Cheque" value="1" id="si3"
+                                                       binding="#{backingBeanScope.backing_screen_master_invoicelist.si3}"/>
+                                        <af:selectItem label="Cash" value="2" id="si8"
+                                                       binding="#{backingBeanScope.backing_screen_master_invoicelist.si8}"/>
+                                        <af:selectItem label="Bank Transfer" value="3" id="si9"
+                                                       binding="#{backingBeanScope.backing_screen_master_invoicelist.si9}"/>
+                                    </af:selectOneChoice>
+                                </td>
+                            </tr>
+                             
+                            <tr>
+                                <td class="td1">
+                                    <af:button text="SAVE" id="b1" action="#{backingBeanScope.backing_screen_master_invoicelist.save}"
+                                               binding="#{backingBeanScope.backing_screen_master_invoicelist.b1}"/>
+                                </td>
+                                <td class="td1">
+                                    <af:button text="CANCEL" id="b2" action="#{backingBeanScope.backing_screen_master_invoicelist.cancel}"
+                                               binding="#{backingBeanScope.backing_screen_master_invoicelist.b2}"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </af:panelWindow>
+                </af:popup>
+                <af:table var="row" rowBandingInterval="0" id="t1" rowSelection="single"
+                          selectionListener="#{backingBeanScope.backing_screen_master_invoicelist.selectionlist}"
+                          inlineStyle="width: 750px;" value="#{backingBeanScope.backing_screen_master_invoicelist.adfTable}"
+                          binding="#{backingBeanScope.backing_screen_master_invoicelist.t1}">
+                    <af:column sortable="false" headerText="Id" id="c1">
+                        <af:outputText value="#{row.iunit}" id="ot1"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Customer Name" id="c2">
+                        <af:outputText value="#{row.iname}" id="ot2"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Total Amount" id="c3">
+                        <af:outputText value="#{row.itotal}" id="ot3"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Status" id="c4">
+                        <af:outputText value="#{row.iqty}" id="ot4"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Terms" id="c5">
+                        <af:outputText value="#{row.icode}" id="ot5"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Payble Amount" id="c8">
+                        <af:outputText value="#{row.itax}" id="ot8"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Action" id="c7">
+                        <af:button id="bt1" text=""
+                                   inlineStyle=" background-color: transparent ; border: transparent 0cm ;"
+                                   icon="/icon/1467049919_settings-24.png" partialSubmit="true">
+                            <af:showPopupBehavior alignId="bt1" popupId="pop1" triggerType="action"/>
+                        </af:button>
+                    </af:column>
+                </af:table>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_invoicelist-->
+</f:view>

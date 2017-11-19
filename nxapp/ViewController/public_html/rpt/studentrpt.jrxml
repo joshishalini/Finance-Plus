@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="studentrpt" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5d819ee5-ffe4-4769-a426-4243c628cd3e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="325"/>
+	<parameter name="id" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from student where idstudent = $P{id}]]>
+	</queryString>
+	<field name="idstudent" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="add" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="city" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="state" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="country" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="phno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="10degree" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="10board" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="10coll" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="10per" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="10year" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="10back" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="12degree" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="12board" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="12coll" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="12per" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="12year" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="12back" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bdegree" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bboard" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bcoll" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bper" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="byear" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bback" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tittle" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="insti" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="expert" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="skill" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="extra" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="72" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="192" height="24" uuid="5582e134-1e38-4610-aa26-4d2ccd8bc884"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sname}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="24" width="192" height="20" uuid="f6da23c6-8a4f-4e69-a4e1-0474260f1f17"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="44" width="192" height="20" uuid="c1ce65a5-1f76-4057-89f4-d03d22010562"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="126" height="20" uuid="e88ab9c8-9691-4e73-b1e9-cdc897fdc920"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Personal Detail :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="707" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="122" width="126" height="20" uuid="d8dc840c-5a6d-4251-b45d-4852a730454e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Accedmic Detail:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="29" width="100" height="20" uuid="efc80165-2a47-4e88-9a99-95d356e02234"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mother's Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="69" width="100" height="20" uuid="ea891539-bf4b-4241-8437-39a5f7e0e823"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Blood group]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="9" width="100" height="20" uuid="7c9f0a31-fb5d-4f70-9a69-94f057e35b9c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of birth]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="29" width="100" height="20" uuid="cdbf9951-6b2a-443b-ba71-4d753610a4e4"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="49" width="100" height="20" uuid="ad13b181-05d7-42aa-9a64-90fb1a31984f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="49" width="100" height="20" uuid="674688e1-6ceb-4687-bf71-20b88462508f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="9" width="121" height="20" uuid="281ea5a8-4776-4767-a8d8-1a197ded173e"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fname}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="9" width="100" height="20" uuid="73ecc407-eb18-419a-9895-a3d4fe22bc54"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Father's Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="29" width="121" height="20" uuid="53766477-21f0-4240-8094-8aca9929793f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mname}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="69" width="61" height="20" uuid="13011599-32b7-4f8a-83c6-c357247ffc6f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="161" y="69" width="60" height="20" uuid="e782eeb8-52fe-4435-9728-a34422193d72"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="89" width="121" height="20" uuid="25d30363-ac56-4ea0-a3d0-b682168c5de9"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{country}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="49" width="121" height="20" uuid="e885cdfb-5cef-41b6-8dc4-8ae255aedee6"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{add}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="346" y="9" width="100" height="20" uuid="1ab7d788-d3d6-4ada-96ff-8e58490a2d65"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="345" y="29" width="100" height="20" uuid="0424fffa-28f1-4d63-a912-86482c9a04ee"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="345" y="49" width="100" height="20" uuid="f748f847-2d92-43db-b969-369aa5e475cf"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="346" y="69" width="100" height="20" uuid="d9fcb675-5b3c-42b7-9037-48885573ffec"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="286" y="199" width="116" height="20" uuid="04e296fe-62e4-493e-b1bf-faf2f3bd1fd2"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Back Logs/Fail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="202" width="115" height="20" uuid="3686f137-2684-4e9f-abe6-728b8d09ff80"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[College/School/Institute]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="181" width="115" height="20" uuid="23b713ea-d0de-4954-8d87-86673a460218"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Board/Univercity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="287" y="179" width="115" height="20" uuid="62c9cf58-01fb-4c9b-84dc-0073bdfeaf05"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Percentage/CGPA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="159" width="115" height="20" uuid="543a0ffb-295e-4c5c-9dc2-5619a02683cf"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Degree/ Examination]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="287" y="159" width="116" height="20" uuid="aebe1f70-092b-4ca7-aa1c-d9d633d26f7a"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year OF Passing]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="287" y="293" width="116" height="20" uuid="e618fba7-b8e4-43af-9b89-58e350732b7e"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Back Logs/Fail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="294" width="115" height="20" uuid="8132c623-8c88-40ac-b833-e1e1058ef974"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[College/School/Institute]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="273" width="115" height="20" uuid="1d3b8747-91a5-4f52-b865-52263713613e"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Board/Univercity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="273" width="115" height="20" uuid="d6caca97-0418-4f4e-857b-e43392ba40bd"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Percentage/CGPA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="254" width="115" height="20" uuid="e2a7603b-d294-4bf9-af2d-eb9d4107e985"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Degree/ Examination]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="287" y="254" width="116" height="20" uuid="f53dfca4-01bb-426c-838d-b5d91eb5c21c"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year OF Passing]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="387" width="116" height="20" uuid="d1a6e256-2769-41fc-a422-4adbb014ceb5"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Back Logs/Fail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="388" width="115" height="20" uuid="e3322815-2598-45cc-893e-abec47fcfd43"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[College/School/Institute]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="367" width="115" height="20" uuid="def34fcc-7dff-4d4c-9638-05422c57fe43"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Board/Univercity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="367" width="115" height="20" uuid="e683bc60-4204-4f0c-8c84-ff96abdd6a79"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Percentage/CGPA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="347" width="115" height="20" uuid="0622231c-1e07-4a79-8741-42ea0878068d"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Degree/ Examination]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="347" width="116" height="20" uuid="39c3f629-bbd3-4e0c-8bf4-d043a185de16"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year OF Passing]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="117" y="159" width="100" height="20" uuid="fc211d0b-d162-4a23-956e-552a5fcee768"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{10degree}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="179" width="100" height="20" uuid="407d27d9-f6e7-46bc-97cd-990c466df9e6"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{10board}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="199" width="100" height="20" uuid="318ed452-6880-48ef-a4ff-ece456b13f66"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{10coll}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="179" width="100" height="20" uuid="48c4f590-a683-43df-bc5c-dd99db69e10f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{10per}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="159" width="100" height="20" uuid="0000fa17-69ae-462f-a014-04b6d00cfa49"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{10year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="199" width="100" height="20" uuid="26940cff-2eb7-4841-988f-ed1066ed840f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{10back}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="254" width="100" height="20" uuid="9113f284-8856-464c-b300-672fc4d73720"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{12degree}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="273" width="100" height="20" uuid="88b22dc0-59eb-465a-a1f9-74f44b75daf9"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{12board}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="293" width="100" height="20" uuid="d65f0a63-f06b-4ae0-b5db-73b7cf35d464"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{12coll}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="273" width="100" height="20" uuid="e5f37f5b-736e-4e65-9182-f23f0d3dea2a"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{12per}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="253" width="100" height="20" uuid="8841fc84-edb9-40c6-a037-c6f2d0088256"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{12year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="293" width="100" height="20" uuid="a3af9a4b-24b8-47fb-bfa4-bf1f63235410"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{12back}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="347" width="100" height="20" uuid="2e58b895-148c-4fc9-8684-192504bbe142"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bdegree}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="367" width="100" height="20" uuid="a4daa1cb-4e57-46d3-8b88-dba002cdd4b4"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bboard}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="387" width="100" height="20" uuid="37789693-af4b-4bcb-9a40-90b9628a1edf"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bcoll}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="367" width="100" height="20" uuid="09055346-6f3d-4f6c-9bb8-ea84dce0d0e3"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bper}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="348" width="100" height="20" uuid="ca05044a-9e2c-430c-ab18-c04ec994a993"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{byear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="387" width="100" height="20" uuid="3356b61e-25c9-4695-994a-acd3f6ca284d"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bback}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="421" width="126" height="20" uuid="3c23d5a7-b3ff-43de-a1c3-e8ab222fe27b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Training Detail :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="581" width="116" height="20" uuid="1a8de43b-a5f1-4305-8af6-f52ae34faeed"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Expertization]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="474" width="115" height="20" uuid="399b301e-a361-42b8-bc0d-12a7c66dcc45"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Institute / Company Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="454" width="115" height="20" uuid="40a246a7-196c-47ed-a883-ebdd977383fb"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Project Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="661" width="116" height="20" uuid="01aa9fe8-cb39-4b8d-84f1-ec149e312c9c"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Extra Calicular Acivity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="494" width="115" height="20" uuid="455a2a63-052c-47b3-a72e-03e17a543cd1"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Discription]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="113" y="455" width="122" height="20" uuid="7902b5e9-d9a9-4ebc-a060-f2787e016cac"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tittle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="474" width="119" height="20" uuid="ce9cd066-ba76-4760-b7dd-dc85e8dcdf7e"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{insti}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="494" width="122" height="20" uuid="0bd54372-b2f8-46aa-87f5-849287476191"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="581" width="130" height="38" uuid="4744aefe-52bd-4bcd-9f56-49c022ba2612"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{expert}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="619" width="130" height="41" uuid="43d63505-41e6-40f1-ae7b-ae75af97153a"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skill}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="660" width="130" height="42" uuid="a6173169-dee5-4127-8fed-62dc0b57504f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{extra}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="620" width="116" height="20" uuid="ba3982d4-f635-4562-8fbd-e6247c97c81c"/>
+				<textElement>
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Skill]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="550" width="126" height="20" uuid="7f8d2a59-59ee-4ef9-b349-5967a42ca3a7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EXTRA :]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

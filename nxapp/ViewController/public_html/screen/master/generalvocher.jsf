@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="generalvocher.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_generalvocher.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_generalvocher.f1}">
+            <af:spacer height="5px"/>
+            <af:panelGroupLayout id="pgl1" layout="vertical">
+                <af:outputLabel value="General Vocher" id="ol1" inlineStyle="font-size: 15pt;"
+                                binding="#{backingBeanScope.backing_screen_master_generalvocher.ol1}"/>
+            </af:panelGroupLayout>
+            <af:panelGroupLayout id="pgl2" layout="vertical">
+                <af:panelGroupLayout id="pgl3" layout="horizontal">
+                    <af:outputLabel value="Account No" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_generalvocher.ol2}"/>
+                    <af:spacer width="18px"/>
+                    <af:inputText label="" id="it1"
+                                  binding="#{backingBeanScope.backing_screen_master_generalvocher.it1}"/>
+                    <af:spacer width="15px"/>
+                    <af:outputLabel value="Account Name" id="ol3"
+                                    binding="#{backingBeanScope.backing_screen_master_generalvocher.ol3}"/>
+                    <af:inputText label="" id="it2"
+                                  binding="#{backingBeanScope.backing_screen_master_generalvocher.it2}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="5px"/>
+                <af:panelGroupLayout id="pgl5" layout="horizontal">
+                    <af:outputLabel value="Lead" id="ol4"
+                                    binding="#{backingBeanScope.backing_screen_master_generalvocher.ol4}"/>
+                    <af:spacer width="71px"/>
+                    <af:inputText label="" id="it3"
+                                  binding="#{backingBeanScope.backing_screen_master_generalvocher.it3}"/>
+                </af:panelGroupLayout>
+                 <af:spacer height="5px"/>
+                <af:panelGroupLayout id="pgl6" layout="horizontal">
+                    <af:outputLabel value="Date" id="ol5"
+                                    binding="#{backingBeanScope.backing_screen_master_generalvocher.ol5}"/>
+                    <af:spacer width="70px"/>
+                    <af:inputDate label="" id="id1"
+                                  binding="#{backingBeanScope.backing_screen_master_generalvocher.id1}"/>
+                   <af:spacer width="13px" />
+                    <af:outputLabel value="Remark" id="ol6"
+                                    binding="#{backingBeanScope.backing_screen_master_generalvocher.ol6}"/>
+                  <af:spacer width="50px" />  <af:inputText label="" id="it4"
+                                  binding="#{backingBeanScope.backing_screen_master_generalvocher.it4}"/>
+                </af:panelGroupLayout>
+                 <af:spacer height="5px"/>
+                <af:panelGroupLayout id="pgl7" layout="horizontal">
+                    <af:outputLabel value="Amount" id="ol7"
+                                    binding="#{backingBeanScope.backing_screen_master_generalvocher.ol7}"/>
+                 <af:spacer width="48px" />
+                    <af:inputText label="" id="it5"
+                                  binding="#{backingBeanScope.backing_screen_master_generalvocher.it5}"/>
+                 <af:spacer width="5px" />
+                    <af:selectOneRadio id="sor1" binding="#{backingBeanScope.backing_screen_master_generalvocher.sor1}">
+                        <af:selectItem label="Credit" value="credit" id="si1"
+                                       binding="#{backingBeanScope.backing_screen_master_generalvocher.si1}"/>
+                        <af:selectItem label="Debit" value="debit" id="si2"
+                                       binding="#{backingBeanScope.backing_screen_master_generalvocher.si2}"/>
+                    </af:selectOneRadio>
+                </af:panelGroupLayout>
+            <af:panelGroupLayout id="pgl8" layout="horizontal">
+                    <af:button text="Save" id="b1"
+                               binding="#{backingBeanScope.backing_screen_master_generalvocher.b1}"/>
+                </af:panelGroupLayout>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_generalvocher-->
+</f:view>

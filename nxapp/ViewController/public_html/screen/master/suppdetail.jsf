@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        beforePhase="#{backingBeanScope.backing_screen_master_suppdetail.bphase}">
+    <af:document title="suppdetail.jsf" id="d1" binding="#{backingBeanScope.backing_screen_master_suppdetail.d1}">
+        <af:resource type="css">
+            .tb1 {
+                width: 12%;
+                padding: 2px;
+            }
+        </af:resource>
+        <af:form id="f1" binding="#{backingBeanScope.backing_screen_master_suppdetail.f1}">
+            <af:panelGroupLayout id="pgl1" layout="vertical" styleClass="AFStretchWidth"
+                                 inlineStyle="margin-left: 10px;"
+                                 binding="#{backingBeanScope.backing_screen_master_suppdetail.pgl1}">
+                  <af:spacer height="20px"/>
+                <af:outputLabel value="Supplier List" id="ol3" inlineStyle="color: #000052;margin-bottom: 10px;font-family: 'Arial Black';font-size: 21pt"
+                                binding="#{backingBeanScope.backing_screen_master_suppdetail.ol3}"/>
+              <af:spacer height="20px"/>
+                <af:panelGroupLayout id="pgl2" layout="horizontal" styleClass="AFStretchWidth"
+                                     inlineStyle="margin-left: 10px;"
+                                     binding="#{backingBeanScope.backing_screen_master_suppdetail.pgl2}">
+                    <af:outputLabel value="Choice" id="ol1"
+                                    binding="#{backingBeanScope.backing_screen_master_suppdetail.ol1}"/>
+                    <af:selectOneChoice autoSubmit="true"
+                                        valueChangeListener="#{backingBeanScope.backing_screen_master_suppdetail.choicechange}"
+                                        id="soc1" binding="#{backingBeanScope.backing_screen_master_suppdetail.soc1}">
+                        <af:selectItem label="By Name" value="By Name" id="si1"
+                                       binding="#{backingBeanScope.backing_screen_master_suppdetail.si1}"/>
+                        <af:selectItem label="By Id" value="By Id" id="si2"
+                                       binding="#{backingBeanScope.backing_screen_master_suppdetail.si2}"/>
+                        <af:selectItem label="By All" value="By All" id="si3"
+                                       binding="#{backingBeanScope.backing_screen_master_suppdetail.si3}"/>
+                        <af:selectItem label="By Mobile No" value="By Mobile NO" id="si4"
+                                       binding="#{backingBeanScope.backing_screen_master_suppdetail.si4}"/>
+                    </af:selectOneChoice>
+                    <af:outputLabel value="Filter" id="ol2"
+                                    binding="#{backingBeanScope.backing_screen_master_suppdetail.ol2}"/>
+                    <af:inputText label="" id="it1" autoSubmit="true"
+                                  valueChangeListener="#{backingBeanScope.backing_screen_master_suppdetail.valchange}"
+                                  binding="#{backingBeanScope.backing_screen_master_suppdetail.it1}"/>
+                    <af:button text="Create New Supplier" id="b3" action="#{backingBeanScope.backing_screen_master_suppdetail.newsupp}" inlineStyle="width:170px;height: 30px;margin-right:100px;font-size: 10pt;padding-left: 17px; "
+                               binding="#{backingBeanScope.backing_screen_master_suppdetail.b3}"/>
+                </af:panelGroupLayout>
+                <af:spacer height="20px"/>
+                <af:table var="row" rowBandingInterval="0" id="t1" rowSelection="single" inlineStyle="width: 740px"
+                          selectionListener="#{backingBeanScope.backing_screen_master_suppdetail.selectionlist}"
+                          value="#{backingBeanScope.backing_screen_master_suppdetail.adfTable}"
+                          binding="#{backingBeanScope.backing_screen_master_suppdetail.t1}">
+                    <af:column sortable="false" headerText="Id" id="c1">
+                        <af:outputText value="#{row.iunit}" id="ot1"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Name" id="c2">
+                        <af:outputText value="#{row.iname}" id="ot2"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Email" id="c3">
+                        <af:outputText value="#{row.iprice}" id="ot3"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Phone NO" id="c4">
+                        <af:outputText value="#{row.iqty}" id="ot4"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Address" id="c5">
+                        <af:outputText value="#{row.itax}" id="ot5"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Edit" id="c6">
+                        <af:button text="" id="b2" action="#{backingBeanScope.backing_screen_master_suppdetail.edit}" partialSubmit="true" inlineStyle=" background-color: transparent ; border: transparent 0cm ;" icon="/icon/Pencil-icon.png" />
+                    </af:column>
+                    <af:column sortable="false" headerText="Details" id="c7">
+                        <af:button text="Details"  action="#{backingBeanScope.backing_screen_master_suppdetail.detsils}" id="b1"/>
+                    </af:column>
+                </af:table>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_screen_master_suppdetail-->
+</f:view>
